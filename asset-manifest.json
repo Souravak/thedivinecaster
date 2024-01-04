@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/thedivinecaster/static/css/main.e6c13ad2.css",
+    "main.js": "/thedivinecaster/static/js/main.820960a4.js",
+    "index.html": "/thedivinecaster/index.html",
+    "main.e6c13ad2.css.map": "/thedivinecaster/static/css/main.e6c13ad2.css.map",
+    "main.820960a4.js.map": "/thedivinecaster/static/js/main.820960a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.820960a4.js"
+  ]
+}
