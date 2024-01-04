@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.e6c13ad2.css",
-    "main.js": "/thedivinecaster/static/js/main.820960a4.js",
+    "main.css": "/thedivinecaster/static/css/main.fd5a5d76.css",
+    "main.js": "/thedivinecaster/static/js/main.838b2e20.js",
+    "static/media/logo.png": "/thedivinecaster/static/media/logo.284e497368cb42ac3496.png",
+    "static/media/contact.png": "/thedivinecaster/static/media/contact.b317b6debe0cf1a03044.png",
     "index.html": "/thedivinecaster/index.html",
-    "main.e6c13ad2.css.map": "/thedivinecaster/static/css/main.e6c13ad2.css.map",
-    "main.820960a4.js.map": "/thedivinecaster/static/js/main.820960a4.js.map"
+    "main.fd5a5d76.css.map": "/thedivinecaster/static/css/main.fd5a5d76.css.map",
+    "main.838b2e20.js.map": "/thedivinecaster/static/js/main.838b2e20.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.820960a4.js"
+    "static/css/main.fd5a5d76.css",
+    "static/js/main.838b2e20.js"
   ]
 }
