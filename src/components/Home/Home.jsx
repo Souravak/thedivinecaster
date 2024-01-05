@@ -27,7 +27,7 @@ const Home = () => {
             <div className="container">
                 <ul className="allChannelList">
                     <li><a href="https://www.youtube.com/thedivinecaster" className="listItem" style={textBoxStyle}>TheDIVINEcasteR</a></li>
-                    <li><a href="https://www.youtube.com/@divinesgaming" className="listItem" style={textBoxStyle}>DIVINE MUSIC HEART</a></li>
+                    <li><a href="https://www.youtube.com/@divinesgaming" className="listItem" style={textBoxStyle}>DIVINES GAMING</a></li>
                     <li><a href="https://www.youtube.com/@divinesmusicheart3317" className="listItem" style={textBoxStyle}>DIVINE MUSIC HEART</a></li>
                     <li><a href="https://www.youtube.com/@divinespcsupport3960" className="listItem" style={textBoxStyle} onClick={(e) => {e.preventDefault();}}>DIVINE SUPPORT</a></li>
                     <li><a href="https://www.youtube.com/@divinescookinghub3323" className="listItem" style={textBoxStyle} onClick={(e) => {e.preventDefault();}}>DIVINE COOKING HUB</a></li>
