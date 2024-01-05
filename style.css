@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     text-decoration: none;
     background: transparent;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 body{
     background: rgb(30, 30, 30);
