@@ -1,0 +1,12 @@
+/* YourComponent.css */
+.App {
+    /* Hide scrollbar for both vertical and horizontal */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    overflow: -moz-scrollbars-none; /* Firefox */
+    overflow: auto; /* Hide scrollbar for WebKit based browsers */
+}
+  
+  .App::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, etc. */
+}

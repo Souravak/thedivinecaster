@@ -1,0 +1,35 @@
+.home{
+    margin-left: 5rem;
+}
+
+.allChannelList{
+    list-style: none;
+    
+}
+
+.listItem{
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 20rem;
+    height: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100vw; */
+}
+
+  
+.channelHomeImage img{
+    width: 48rem;
+    height: auto;
+}
