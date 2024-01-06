@@ -1,16 +1,40 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.8cfca9d1.css",
-    "main.js": "/thedivinecaster/static/js/main.ef415c4b.js",
+    "main.css": "/thedivinecaster/static/css/main.917e9ddb.css",
+    "main.js": "/thedivinecaster/static/js/main.a5c6eb69.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
+    "static/media/zebronics-zebax-ninja.jpg": "/thedivinecaster/static/media/zebronics-zebax-ninja.38f40379c19d4d535684.jpg",
+    "static/media/setrack-gps-tracker-device.jpg": "/thedivinecaster/static/media/setrack-gps-tracker-device.b64e0265ee15e3bbd65c.jpg",
+    "static/media/realme-narzo-n55.jpg": "/thedivinecaster/static/media/realme-narzo-n55.793fc8a3d9442cbf44d4.jpg",
+    "static/media/amazon-basics-bt-speaker.jpg": "/thedivinecaster/static/media/amazon-basics-bt-speaker.a84dbe8f79bd31bd085c.jpg",
+    "static/media/mi-electric-toothbrush.jpg": "/thedivinecaster/static/media/mi-electric-toothbrush.5596d5587e15d7f82191.jpg",
+    "static/media/xmate-zorro-pro.jpg": "/thedivinecaster/static/media/xmate-zorro-pro.3513046f4d2dd4bc2cb3.jpg",
+    "static/media/boat-wave-edge-smart-watch.jpg": "/thedivinecaster/static/media/boat-wave-edge-smart-watch.06a4cf9f066d1b17e788.jpg",
+    "static/media/macbook-pro.jpg": "/thedivinecaster/static/media/macbook-pro.2c90429343565c739293.jpg",
+    "static/media/boya-m1-pro-microphone.jpg": "/thedivinecaster/static/media/boya-m1-pro-microphone.8189d06ec8f117db725c.jpg",
+    "static/media/asus-tuf-h1-headset.jpg": "/thedivinecaster/static/media/asus-tuf-h1-headset.b9bc06fc4e2ec248b116.jpg",
+    "static/media/zebronics-zeb-fun-karaoke-mic.jpg": "/thedivinecaster/static/media/zebronics-zeb-fun-karaoke-mic.25d040e642997d85f165.jpg",
+    "static/media/tp-link-wifi-dongle.jpg": "/thedivinecaster/static/media/tp-link-wifi-dongle.a6a8368fb083d61802d9.jpg",
+    "static/media/redgear-a15-gaming-mouse.jpg": "/thedivinecaster/static/media/redgear-a15-gaming-mouse.e9e3afdc233c3529bb66.jpg",
+    "static/media/rschrono-petronas-e63-gyro.jpg": "/thedivinecaster/static/media/rschrono-petronas-e63-gyro.e2b5104078a3ff71fc98.jpg",
     "static/media/logo.png": "/thedivinecaster/static/media/logo.284e497368cb42ac3496.png",
+    "static/media/lapcare-d-lite-plus-keyboard.jpg": "/thedivinecaster/static/media/lapcare-d-lite-plus-keyboard.3e02f1cff808e34a2569.jpg",
+    "static/media/rog-strix-g15.jpg": "/thedivinecaster/static/media/rog-strix-g15.d6281931dc5f8483d071.jpg",
+    "static/media/logitech-m590.jpg": "/thedivinecaster/static/media/logitech-m590.2b567865dfb05e8663f2.jpg",
+    "static/media/cosmic-byte-ares-wireless-controller.jpg": "/thedivinecaster/static/media/cosmic-byte-ares-wireless-controller.ca424c341adde7fec4b9.jpg",
+    "static/media/truke-s2-lite.jpg": "/thedivinecaster/static/media/truke-s2-lite.085069b1fc700141ac2b.jpg",
+    "static/media/tp-link-wifi-range-extender.jpg": "/thedivinecaster/static/media/tp-link-wifi-range-extender.26935a2221c893dcdf9f.jpg",
+    "static/media/redgear-canyon-gaming-keyboard.jpg": "/thedivinecaster/static/media/redgear-canyon-gaming-keyboard.76e417b2d573b7b1e0bd.jpg",
+    "static/media/sandisk-ultra-usb.jpg": "/thedivinecaster/static/media/sandisk-ultra-usb.45ff623cb30fd1567702.jpg",
     "static/media/contact.png": "/thedivinecaster/static/media/contact.b317b6debe0cf1a03044.png",
+    "static/media/d-link-wifi-adapter.jpg": "/thedivinecaster/static/media/d-link-wifi-adapter.8a1bc44e8ff8288caadd.jpg",
+    "static/media/vivo-v15-pro.jpg": "/thedivinecaster/static/media/vivo-v15-pro.6e1b8359c38ef10c627d.jpg",
     "index.html": "/thedivinecaster/index.html",
-    "main.8cfca9d1.css.map": "/thedivinecaster/static/css/main.8cfca9d1.css.map",
-    "main.ef415c4b.js.map": "/thedivinecaster/static/js/main.ef415c4b.js.map"
+    "main.917e9ddb.css.map": "/thedivinecaster/static/css/main.917e9ddb.css.map",
+    "main.a5c6eb69.js.map": "/thedivinecaster/static/js/main.a5c6eb69.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cfca9d1.css",
-    "static/js/main.ef415c4b.js"
+    "static/css/main.917e9ddb.css",
+    "static/js/main.a5c6eb69.js"
   ]
 }
