@@ -10,7 +10,7 @@
 .listItem{
     margin: 1rem;
     padding: 1rem;
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     border-radius: 5px;
     width: 20rem;
     height: 1.8rem;
@@ -19,7 +19,14 @@
     justify-content: space-between;
     text-decoration: none;
     vertical-align: middle;
+    outline: none;
 }
+
+.listItem:hover{
+    background-color: #000000;
+    cursor: pointer;
+}
+
 .container{
     display: flex;
     flex-direction: row;
