@@ -1,6 +1,8 @@
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Trending from './components/Trending/Trending';
+import TDCStores from './components/TDCStores/TDCStores';
 import NotFound from './components/NotFound/NotFound';
 import { useState } from 'react';
 import './App.css';
@@ -14,6 +16,10 @@ function App() {
         return <Home />;
       case 'about':
         return <About />;
+      case 'trending':
+        return <Trending />
+      case 'tdcstores':
+        return <TDCStores />
       default:
         return <NotFound />;
     }
@@ -21,22 +27,13 @@ function App() {
 
   return (
     <div>
+      {/* <Navbar /> */}
+      {/* <TDCStores /> */}
+      {/* <Trending /> */}
       <Navbar setCurrentPage={setCurrentPage} />
       {renderPage()}
     </div>
   );
-
-  // return (
-  //   <Router>
-  //     <div>
-  //       <Navbar />
-  //       <Routes>
-  //         <Route path="/home" exact element={Home} />
-  //         <Route path="/about" element={About} />
-  //       </Routes>
-  //     </div>
-  //   </Router>
-  // );
 }
 
 export default App;
