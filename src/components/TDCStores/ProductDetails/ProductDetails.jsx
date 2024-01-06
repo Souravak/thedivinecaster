@@ -128,7 +128,7 @@ const ProductDetails = [
     },
 
     {
-        name: 'D-Link DWA-131 300 Mbps Wireless Nano USB Adapter',
+        name: 'D-Link DWA-131 300 Mbps Wifi Adapter',
         oldPrice: '799',
         newPrice: '599',
         myLink: 'https://amzn.eu/d/dIarYJh',

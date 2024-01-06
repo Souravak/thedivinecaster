@@ -8,7 +8,8 @@ const ProductGalleryComponent = () => {
       <div className="image-container">
         {productDetails.map((product, index) => (
           <div key={index} className="image-card">
-            <img src={product.img} alt={`Image ${index + 1}`} className="galleryItem" />
+            <img src={product.img} alt={`Image ${index + 1}`} className="galleryItem" 
+              onClick={() => window.open(product.myLink, '_blank')}/>
             <div className="details">
               <span className="productName">{product.name}</span>
               <div className="priceDetails">
