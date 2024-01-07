@@ -1,10 +1,65 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './About.css';
+import ProfilePicture from '../../assets/images/profile-picture.jpg';
+import Verified from '../About/Verified/Verified';
 
 const About = () => {
   return (
     <div className="about">
-        <div className="title">About</div>
+        <div className="about-body">
+          <div className="title">About</div>
+          <div className="container">
+            <div className="social-item">
+              <div className="social-item-box">
+                <div className="social-item-title">thedivinecaster<Verified /></div>
+                <div className="social-item-pic-counter">
+                  <img src={ProfilePicture} alt="" className="profile-picture"/>
+                  <div className="follow-counter">
+                    <div className="social-item-counter-section">
+                      <div className="social-item-counter-feed">
+                        <a href="https://www.instagram.com/thedivinecaster/" className="channel-link" target="_blank">
+                          <div className="social-item-counter-value">124</div>
+                          <div className="social-item-counter-title">Posts</div>
+                        </a>
+                      </div>
+                      <div className="social-item-counter-feed">
+                        <a href="https://www.instagram.com/thedivinecaster/followers/" className="channel-link" target="_blank">
+                          <div className="social-item-counter-value">471</div>
+                          <div className="social-item-counter-title">Followers</div>
+                        </a>
+                      </div>
+                      <div className="social-item-counter-feed">
+                        <a href="https://www.instagram.com/thedivinecaster/following/" className="channel-link" target="_blank">
+                          <div className="social-item-counter-value">11</div>
+                          <div className="social-item-counter-title">Following</div>
+                        </a>
+                      </div>
+                    </div>
+                    
+                      <a href="https://www.instagram.com/thedivinecaster" target="_blank" className="follow-button-text follow-button">Follow</a>
+                    
+                  </div>
+                </div>
+                <div className="social-item-name">TheDIVINEcasteR</div>
+                <div className="threads"><i class='fa-brands fa-threads'></i><a href="https://www.threads.net/@thedivinecaster" className="channel-link">thedivinecaster</a></div>
+                <div className="role">Video creater</div>
+                <div className="social-item-bio">
+                  <div className="bio-line">#youtuber #gamer</div>
+                  <div className="bio-line">YT: <a href="https://www.youtube.com/thedivinecaster" target="_blank" className="channel-link">TheDIVINEcasteR</a></div>
+                  <div className="bio-line">YT: <a href="https://www.youtube.com/@divinesgaming" target="_blank" className="channel-link">DIVINES GAMING</a></div>
+                  <div className="bio-line">Influencer | Tech Talks | Unboxing & Review</div>
+                  <div className="followed-by">Followed by 
+                    <span className="followed-by-name">
+                      <a href="https://www.instagram.com/sohail21400" target="_blank" rel="noopener noreferrer"> sohail21400</a>, 
+                      <a href="https://www.instagram.com/__mithun___k " target="_blank" rel="noopener noreferrer"> mithun_k</a>, 
+                      <a href="https://www.instagram.com/kiransbaliga" target="_blank" rel="noopener noreferrer"> kiransbaliga</a>
+                    </span> and 39 others
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   )
 }
