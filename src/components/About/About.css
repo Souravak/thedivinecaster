@@ -1,6 +1,11 @@
 .about{
     /* margin: 0 5rem; */
     
+    
+}
+
+.about-container{
+    /* height:100%; */
 }
 .about-body{
     margin: 0 5rem;
@@ -18,7 +23,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    gap: 5rem;
     align-items: center;
     margin: auto;
     /* width: 100vw; */
+    flex-wrap: wrap;
+}
+
+.social-item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(63, 63, 63, 0.632);
+    border-radius: 1rem;
+    gap: 5px;
+    margin-bottom: 5rem;
+}
+
+.social-title{
+    text-align: center;
 }

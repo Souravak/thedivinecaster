@@ -7,7 +7,7 @@ const Instagram = () => {
   return (
     <div className="social-item">
       <div className="social-item-box">
-        <div className="social-item-title">thedivinecaster<Verified /></div>
+        <div className="social-item-title"><i class="fa-brands fa-instagram" style={{color:"purple"}}></i>thedivinecaster<Verified /></div>
         <div className="social-item-pic-counter">
           <img src={ProfilePicture} alt="" className="profile-picture"/>
           <div className="follow-counter">
@@ -35,7 +35,7 @@ const Instagram = () => {
           </div>
         </div>
         <div className="social-item-name">TheDIVINEcasteR</div>
-        <div className="threads"><i class='fa-brands fa-threads'></i><a href="https://www.threads.net/@thedivinecaster" className="channel-link">thedivinecaster</a></div>
+        <div className="threads"><i class='fa-brands fa-threads'></i><a href="https://www.threads.net/@thedivinecaster" className="channel-link" target="_blank">thedivinecaster</a></div>
         <div className="role">Video creater</div>
         <div className="social-item-bio">
           <div className="bio-line">#youtuber #gamer</div>
@@ -45,11 +45,16 @@ const Instagram = () => {
           <div className="followed-by">Followed by 
             <span className="followed-by-name">
               <a href="https://www.instagram.com/sohail21400" target="_blank" rel="noopener noreferrer"> sohail21400</a>, 
-              <a href="https://www.instagram.com/__mithun___k " target="_blank" rel="noopener noreferrer"> mithun_k</a>, 
-              <a href="https://www.instagram.com/kiransbaliga" target="_blank" rel="noopener noreferrer"> kiransbaliga</a>
+              <a href="https://www.instagram.com/__mithun___k " target="_blank" rel="noopener noreferrer"> mithun_k</a>
+              {/* <a href="https://www.instagram.com/kiransbaliga" target="_blank" rel="noopener noreferrer"> kiransbaliga</a> */}
             </span> and 39 others
           </div>
         </div>
+      </div>
+      <div className="follow-instagram-button">
+        <a href="https://instagram.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="follow-instagram-item-button">
+            <span className="follow-instagram-button-header">Follow Now</span>
+        </a>
       </div>
     </div>
   )

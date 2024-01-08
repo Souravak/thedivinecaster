@@ -1,7 +1,7 @@
 
 .social-item{
     width: 22rem;
-    height: 22rem;
+    height: 25rem;
     background: rgb(0, 0, 0);
     border-radius: 1rem;
 }
@@ -15,6 +15,7 @@
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom:1rem;
+    padding-top: 1rem;
 }
 
 .profile-picture{
@@ -96,3 +97,17 @@
     color: white;
 }
 
+.follow-instagram-button{
+    text-align: center;
+    margin-top: 10px;
+}
+.follow-instagram-item-button{
+    background: royalblue;
+    padding: 1px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
