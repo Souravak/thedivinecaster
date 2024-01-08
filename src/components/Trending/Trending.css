@@ -1,0 +1,18 @@
+.trending-container{
+    text-align: center;
+}
+
+.videos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+.video-item iframe{
+    margin: 1rem;
+}
+
+iframe {
+    border-radius: 5px;
+}
