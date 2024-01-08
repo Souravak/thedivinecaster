@@ -1,0 +1,53 @@
+.channel-data{
+}
+
+.channel-data{
+    width: 12rem;
+}
+
+.social-item-pic-counter{
+}
+
+.channel-id{
+    font-size: 0.8rem;
+    color: rgba(144, 144, 144, 0.842);
+
+}
+
+.channel-status{
+    font-size: 0.7rem;
+    color: rgba(144, 144, 144, 0.842);
+}
+
+.social-item-pic-counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.channel-details{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-details-item{
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+.channel-details-item a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.view-email-address{
+    background: rgba(77, 75, 75, 0.842);
+    width: fit-content;
+    padding: 1px 5px;
+    border-radius: 20px;
+}
+
+.channel-details-item i{
+    margin-right: 5px;
+}

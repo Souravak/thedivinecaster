@@ -1,113 +1,24 @@
-    .about{
-        /* margin: 0 5rem; */
-        
-    }
-    .about-body{
-        margin: 0 5rem;
-    }
-
-    .title{
-        text-align: center;
-        color: white;
-        font-size: 2rem;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .social-item{
-        width: 22rem;
-        height: 25rem;
-        background: rgb(0, 0, 0);
-        border-radius: 1rem;
-    }
-
-    .social-item-box{
-        margin: 1rem;
-    }
-
-    .social-item-title{
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom:1rem;
-    }
-
-    .profile-picture{
-        width: 6rem;
-        border-radius: 20rem;
-        align-items: left;
-        margin-left: 5px; /* image left adjustment */
-    }
-
-    .social-item-pic-counter{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .social-item-counter-section{
-        display: flex;
-        justify-content: space-around;
-        width: 12rem;
-        text-align: center;
-        font-size: 0.9rem;
-    }
-    .social-item-counter-title{
-        font-size: 0.7rem;
-    }
-
-    .follow-counter{
-        display: flex;
-        flex-direction: column;
-    }
+.about{
+    /* margin: 0 5rem; */
     
-    .follow-button-text{
-        background: royalblue;
-        text-align: center;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        font-size: 0.8rem;
-        width: 90%;
-        margin: auto;
-        vertical-align: middle;
-    }
+}
+.about-body{
+    margin: 0 5rem;
+}
 
-    .threads{
-        font-size: 0.75rem;
-        background: rgba(44, 44, 44, 0.642);
-        width: fit-content;
-        padding: 1px 5px;
-        border-radius: 10px;
-    }
+.title{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
 
-    .role{
-        margin-top: 0.2rem;
-        font-size: 0.75rem;
-        color: rgba(106, 106, 106, 0.642);
-    }
-
-    .social-item-bio{
-        font-size: 0.8rem;
-    }
-
-    .channel-link{
-        text-decoration: none;
-        color: white;
-        cursor: pointer;
-    }
-
-    .followed-by{
-        font-size: 0.65rem;
-        font-weight: 100;
-    }
-
-    .followed-by-name{
-        font-weight: bold;
-    }
-
-    .followed-by-name a{
-        text-decoration: none;
-        color: white;
-    }
-
+.about-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    /* width: 100vw; */
+}
