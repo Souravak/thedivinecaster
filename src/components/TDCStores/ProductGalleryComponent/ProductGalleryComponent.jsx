@@ -14,9 +14,9 @@ const ProductGalleryComponent = () => {
               <span className="productName">{product.name}</span>
               <div className="priceDetails">
                 <span className="newPrice">₹{product.newPrice}</span>
-                <span>MRP: <span className="oldPrice">₹{product.oldPrice}</span></span>
+                <span className="old-price-mrp">MRP: <span className="oldPrice">₹{product.oldPrice}</span></span>
               </div>
-              <button onClick={() => window.open(product.myLink, '_blank')}>View</button>
+              <button onClick={() => window.open(product.myLink, '_blank')} className="view-button">View</button>
             </div>
           </div>
         ))}

@@ -4,16 +4,21 @@
 
 .allChannelList{
     list-style: none;
-    
+    padding: 0rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 .listItem{
-    margin: 1rem;
-    padding: 1rem;
-    border: 0px solid #ccc;
+    /* margin: 2rem; */
+    padding: 1.5rem;
+    border: 0;
     border-radius: 5px;
-    width: 20rem;
-    height: 1.8rem;
+    width: 25rem;
+    /* height: 1rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,7 +35,7 @@
 .container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: auto;
     /* width: 100vw; */
