@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.e7c7cc73.css",
-    "main.js": "/thedivinecaster/static/js/main.3a045af1.js",
+    "main.css": "/thedivinecaster/static/css/main.3e142042.css",
+    "main.js": "/thedivinecaster/static/js/main.b0c54358.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/zebronics-zebax-ninja.jpg": "/thedivinecaster/static/media/zebronics-zebax-ninja.38f40379c19d4d535684.jpg",
     "static/media/setrack-gps-tracker-device.jpg": "/thedivinecaster/static/media/setrack-gps-tracker-device.b64e0265ee15e3bbd65c.jpg",
@@ -16,6 +16,15 @@
     "static/media/zebronics-zeb-fun-karaoke-mic.jpg": "/thedivinecaster/static/media/zebronics-zeb-fun-karaoke-mic.25d040e642997d85f165.jpg",
     "static/media/tp-link-wifi-dongle.jpg": "/thedivinecaster/static/media/tp-link-wifi-dongle.a6a8368fb083d61802d9.jpg",
     "static/media/redgear-a15-gaming-mouse.jpg": "/thedivinecaster/static/media/redgear-a15-gaming-mouse.e9e3afdc233c3529bb66.jpg",
+    "static/media/IMG-20240109-WA0003.jpg": "/thedivinecaster/static/media/IMG-20240109-WA0003.ca7af7a3105887b90c95.jpg",
+    "static/media/IMG-20240109-WA0010.jpg": "/thedivinecaster/static/media/IMG-20240109-WA0010.da6c042eeb145d1dbd3c.jpg",
+    "static/media/IMG-20240109-WA0004.jpg": "/thedivinecaster/static/media/IMG-20240109-WA0004.bd549655b5fbdd3e94be.jpg",
+    "static/media/IMG-20240109-WA0006.jpg": "/thedivinecaster/static/media/IMG-20240109-WA0006.24480dab00ddc0cdc456.jpg",
+    "static/media/IMG-20240109-WA0009.jpg": "/thedivinecaster/static/media/IMG-20240109-WA0009.d55fd6eccfe3a1488de8.jpg",
+    "static/media/IMG-20240109-WA0008.jpg": "/thedivinecaster/static/media/IMG-20240109-WA0008.21a415fc366ca116baf9.jpg",
+    "static/media/IMG-20240109-WA0005.jpg": "/thedivinecaster/static/media/IMG-20240109-WA0005.b8dc782245d49c7d873c.jpg",
+    "static/media/qr50.jpg": "/thedivinecaster/static/media/qr50.a247c81c070107658f3b.jpg",
+    "static/media/IMG-20240109-WA0007.jpg": "/thedivinecaster/static/media/IMG-20240109-WA0007.d7b180f4124d023ef17d.jpg",
     "static/media/rschrono-petronas-e63-gyro.jpg": "/thedivinecaster/static/media/rschrono-petronas-e63-gyro.e2b5104078a3ff71fc98.jpg",
     "static/media/logo.png": "/thedivinecaster/static/media/logo.284e497368cb42ac3496.png",
     "static/media/lapcare-d-lite-plus-keyboard.jpg": "/thedivinecaster/static/media/lapcare-d-lite-plus-keyboard.3e02f1cff808e34a2569.jpg",
@@ -31,11 +40,11 @@
     "static/media/d-link-wifi-adapter.jpg": "/thedivinecaster/static/media/d-link-wifi-adapter.8a1bc44e8ff8288caadd.jpg",
     "static/media/vivo-v15-pro.jpg": "/thedivinecaster/static/media/vivo-v15-pro.6e1b8359c38ef10c627d.jpg",
     "index.html": "/thedivinecaster/index.html",
-    "main.e7c7cc73.css.map": "/thedivinecaster/static/css/main.e7c7cc73.css.map",
-    "main.3a045af1.js.map": "/thedivinecaster/static/js/main.3a045af1.js.map"
+    "main.3e142042.css.map": "/thedivinecaster/static/css/main.3e142042.css.map",
+    "main.b0c54358.js.map": "/thedivinecaster/static/js/main.b0c54358.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7c7cc73.css",
-    "static/js/main.3a045af1.js"
+    "static/css/main.3e142042.css",
+    "static/js/main.b0c54358.js"
   ]
 }
