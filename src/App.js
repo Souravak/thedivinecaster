@@ -3,6 +3,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Trending from './components/Trending/Trending';
 import TDCStores from './components/TDCStores/TDCStores';
+import Donate from './components/Donate/Donate';
 import NotFound from './components/NotFound/NotFound';
 import { useState } from 'react';
 import './App.css';
@@ -20,6 +21,8 @@ function App() {
         return <Trending />
       case 'tdcstores':
         return <TDCStores />
+      case 'donate':
+        return <Donate />;
       default:
         return <NotFound />;
     }

@@ -1,0 +1,31 @@
+.qr-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.qr-image-container {
+    width: 20rem;
+    height: 22rem;
+    overflow: hidden;
+    position: relative;
+}
+  
+.qr-center-square {
+    width: 26.2rem;
+    height: 32.2rem;
+    /* max-width: none; */
+    /* max-height: none; */
+    position: absolute;
+    top: 16.2rem;
+    left: 10rem;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.qr-amount{
+    text-align: center;
+}
+  

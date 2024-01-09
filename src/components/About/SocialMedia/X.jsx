@@ -12,7 +12,7 @@ const X = () => {
                     <img src={ProfilePicture} alt="" className="profile-picture"/>
                     <div className="channel-data">
                         <div className="channel-name">TheDIVINEcasteR</div>
-                        <div className="channel-id"><a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noopener noreferrer">@TheDIVINEcasteR</a></div>
+                        <div className="channel-id"><a href="https://twitter.com/thedivinecaster" target="_blank" rel="noopener noreferrer">@TheDIVINEcasteR</a></div>
                         <div className="channel-status">
                             <span className="subscriber-count">48 tweets</span>
                             <span> ‧ </span>
