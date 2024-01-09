@@ -6,10 +6,11 @@
     list-style: none;
     padding: 0rem;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     flex-direction: column;
     gap: 0.2rem;
+    justify-content: space-evenly;
 }
 
 .listItem{
