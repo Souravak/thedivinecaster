@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.402cc3eb.css",
+    "main.css": "/thedivinecaster/static/css/main.59a569ce.css",
     "main.js": "/thedivinecaster/static/js/main.3a045af1.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/zebronics-zebax-ninja.jpg": "/thedivinecaster/static/media/zebronics-zebax-ninja.38f40379c19d4d535684.jpg",
@@ -31,11 +31,11 @@
     "static/media/d-link-wifi-adapter.jpg": "/thedivinecaster/static/media/d-link-wifi-adapter.8a1bc44e8ff8288caadd.jpg",
     "static/media/vivo-v15-pro.jpg": "/thedivinecaster/static/media/vivo-v15-pro.6e1b8359c38ef10c627d.jpg",
     "index.html": "/thedivinecaster/index.html",
-    "main.402cc3eb.css.map": "/thedivinecaster/static/css/main.402cc3eb.css.map",
+    "main.59a569ce.css.map": "/thedivinecaster/static/css/main.59a569ce.css.map",
     "main.3a045af1.js.map": "/thedivinecaster/static/js/main.3a045af1.js.map"
   },
   "entrypoints": [
-    "static/css/main.402cc3eb.css",
+    "static/css/main.59a569ce.css",
     "static/js/main.3a045af1.js"
   ]
 }
