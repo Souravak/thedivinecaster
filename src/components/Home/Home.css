@@ -25,6 +25,7 @@
     text-decoration: none;
     vertical-align: middle;
     outline: none;
+    transition: background-color 0.3s cubic-bezier(0.8, 0.01, 0.25, 1);
 }
 
 .listItem:hover{
@@ -33,16 +34,16 @@
 }
 
 .container{
+    /* align-items: center; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
-    /* width: 100vw; */
+    justify-content: space-evenly;
+    /* margin: auto; */
+    /* vertical-align: middle; */
 }
 
   
 .channelHomeImage img{
-    width: 48rem;
-    height: auto;
+    width: auto;
+    height: calc(100vh - 6rem);
 }
