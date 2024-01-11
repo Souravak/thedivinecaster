@@ -1,0 +1,17 @@
+.footer-container {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-media-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 2rem; */
+}
+
+.social-media-links a{
+    margin: 0 0.5rem;
+}

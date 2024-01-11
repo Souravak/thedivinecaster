@@ -21,10 +21,9 @@ const Navbar = ({ setCurrentPage }) => {
           <button onClick={() => handleNavClick('trending')} className={`desktopMenuListItem item ${activeNav === 'trending' ? 'active' : ''}`}>Trending</button>
           <button onClick={() => handleNavClick('tdcstores')} className={`desktopMenuListItem item ${activeNav === 'tdcstores' ? 'active' : ''}`}>TDC Stores</button>
           <button onClick={() => handleNavClick('donate')} className={`desktopMenuListItem item ${activeNav === 'donate' ? 'active' : ''}`}>Donate</button>
+          {/* <button >Contact Me</button> */}
         </div>
-        <button className="desktopMenuBtn" onClick={() => {
-          document.getElementById("contact").scrollIntoView({behavior: "smooth"});
-          }}>
+        <button className="contact-btn" style={{borderRadius: "5rem", outline: "0",border: "0",padding: "5px 1rem"}} onClick={() => handleNavClick('contact')} className={`${activeNav === 'contact' ? '' : ''}`}>
             <img src={contactImg} alt="" className="desktopMenuImg" />&nbsp;Contact Me
         </button>
     </nav>

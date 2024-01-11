@@ -4,6 +4,8 @@ import About from './components/About/About';
 import Trending from './components/Trending/Trending';
 import TDCStores from './components/TDCStores/TDCStores';
 import Donate from './components/Donate/Donate';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 import { useState } from 'react';
 import './App.css';
@@ -23,6 +25,8 @@ function App() {
         return <TDCStores />
       case 'donate':
         return <Donate />;
+      case 'contact':
+        return <Contact />;
       default:
         return <NotFound />;
     }
@@ -35,6 +39,7 @@ function App() {
       {/* <Trending /> */}
       <Navbar setCurrentPage={setCurrentPage} />
       {renderPage()}
+      <Footer />
     </div>
   );
 }
