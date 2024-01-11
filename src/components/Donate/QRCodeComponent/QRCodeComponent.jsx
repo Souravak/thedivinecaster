@@ -10,7 +10,7 @@ const QRCodeComponent = ({ QRAmount }) => {
         <div className="qr-image-container">
           <img src={require(`${imagePath}`)} alt={QRAmount} className="qr-center-square"/>
         </div>
-        <p className="qr-amount">Amount: {QRAmount}Rs</p>
+        <p className="qr-amount">Amount: {QRAmount} Rs</p>
       </div>
     </>
   );
