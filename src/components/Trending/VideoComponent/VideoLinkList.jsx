@@ -1,8 +1,8 @@
 const VideoLinkList = [
-    'https://youtu.be/qXrH7fI2SxU',
-    'https://youtu.be/p1vsXWxpFxY',
     'https://youtu.be/yMhWWzHn4co',
     'https://youtu.be/80EcSXacD_o',
+    'https://youtu.be/qXrH7fI2SxU',
+    'https://youtu.be/p1vsXWxpFxY',
     'https://youtu.be/QL5Y-SxYEbw',
     'https://youtu.be/Ji8AvrZJwz0',
     'https://youtu.be/2bsNgIEMjsk',
