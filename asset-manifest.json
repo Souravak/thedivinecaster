@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.d7d4dea8.css",
-    "main.js": "/thedivinecaster/static/js/main.073954de.js",
+    "main.css": "/thedivinecaster/static/css/main.69f17498.css",
+    "main.js": "/thedivinecaster/static/js/main.0743585d.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/zebronics-zebax-ninja.jpg": "/thedivinecaster/static/media/zebronics-zebax-ninja.38f40379c19d4d535684.jpg",
     "static/media/setrack-gps-tracker-device.jpg": "/thedivinecaster/static/media/setrack-gps-tracker-device.b64e0265ee15e3bbd65c.jpg",
@@ -42,11 +42,11 @@
     "static/media/vivo-v15-pro.jpg": "/thedivinecaster/static/media/vivo-v15-pro.6e1b8359c38ef10c627d.jpg",
     "static/media/instagram.png": "/thedivinecaster/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "index.html": "/thedivinecaster/index.html",
-    "main.d7d4dea8.css.map": "/thedivinecaster/static/css/main.d7d4dea8.css.map",
-    "main.073954de.js.map": "/thedivinecaster/static/js/main.073954de.js.map"
+    "main.69f17498.css.map": "/thedivinecaster/static/css/main.69f17498.css.map",
+    "main.0743585d.js.map": "/thedivinecaster/static/js/main.0743585d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7d4dea8.css",
-    "static/js/main.073954de.js"
+    "static/css/main.69f17498.css",
+    "static/js/main.0743585d.js"
   ]
 }
