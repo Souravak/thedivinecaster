@@ -1,6 +1,7 @@
 import React from 'react';
 import './TDCStores.css';
 import ProductGalleryComponent from './ProductGalleryComponent/ProductGalleryComponent';
+import Footer from '../Footer/Footer';
 
 
 const TDCStores = () => {
@@ -12,6 +13,7 @@ const TDCStores = () => {
           <ProductGalleryComponent />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

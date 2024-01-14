@@ -5,23 +5,26 @@ const Footer = () => {
   return (
     <div className="footer-container">
         <div className="social-media-links">
-            <a href="https://www.facebook.com/tdcstores" target="_blank" rel="noreferrer">
-                <i className="fab fa-facebook-f"></i>
+            <a href="https://twitter.com/thedivinecaster" target="_blank" rel="noreferrer">
+                <i className="fab fa-x-twitter"></i>
             </a>
-            <a href="https://twitter.com/tdcstores" target="_blank" rel="noreferrer">
-                <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/tdcstores/" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/thedivinecaster" target="_blank" rel="noreferrer">
                 <i className="fab fa-instagram"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCwZr8jgZ1p2zI5C4oXwQ4ZQ" target="_blank" rel="noreferrer">
+            <a href="https://www.youtube.com/thedivinecaster" target="_blank" rel="noreferrer">
                 <i className="fab fa-youtube"></i>
             </a>
-            <a href="https://www.linkedin.com/company/tdcstores" target="_blank" rel="noreferrer">
+            {/* <a href="https://www.linkedin.com/in/thedivinecaster" target="_blank" rel="noreferrer">
                 <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.whatsapp.com/" target="_blank" rel="noreferrer">
+            </a> */}
+            <a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noreferrer">
                 <i className="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noreferrer">
+                <i className="fab fa-threads"></i>
+            </a>
+            <a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noreferrer">
+                <i className="fab fa-telegram"></i>
             </a>
         </div>
         <div className="all-rights-reserved">

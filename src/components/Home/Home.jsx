@@ -8,7 +8,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <div className="container">
+            <div className="home-container">
                 <ul className="allChannelList">
                     <li><a href="https://www.youtube.com/thedivinecaster" rel="noopener noreferrer" className="listItem box glowing">TheDIVINEcasteR</a></li>
                     <li><a href="https://www.youtube.com/@divinesgaming" rel="noopener noreferrer" className="listItem box glowing">DIVINES GAMING</a></li>
@@ -17,10 +17,7 @@ const Home = () => {
                     <li><a href="https://www.youtube.com/@divinescookinghub3323" rel="noopener noreferrer" className="listItem box glowing" onClick={(e) => {e.preventDefault();}}>DIVINES COOKING HUB</a></li>
                 </ul>
                 <div className="channelHomeImage">
-                    <div>
-                        
-                        <div className="tester"><img src={channelImg} alt="" /></div>
-                    </div>
+                    <div className="tester"><img src={channelImg} alt="" /></div>
                 </div>
             </div>
         </div>

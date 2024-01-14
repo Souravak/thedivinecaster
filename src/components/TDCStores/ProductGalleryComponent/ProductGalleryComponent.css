@@ -6,27 +6,37 @@
     border-radius: 0.4rem;
     cursor: pointer;
     object-fit: cover;
+    transition: transform 0.3s;
 }
 
 .galleryItem:hover{
     transform: scale(1.05);
-    transition: transform 0.5s ease-in-out;
-    /* border: none; */
 }
 
 .image-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 5px;
     justify-content: center;
     align-items: center;
 }
 .image-card{
+    
     transition: background-color 0.5s ease;
+    
     border-radius: 0.4rem;
 }
+.image-card:hover img{
+    transform: scale(1.02);     
+}
+
+.image-card:hover img{
+    /* transform: scale(1.05); */
+}
 .image-card:hover{
-    background: rgb(74, 73, 73);
+    
+    background: rgb(158 157 157 / 6%);
 }
 
 .image-card p{

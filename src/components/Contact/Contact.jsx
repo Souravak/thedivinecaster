@@ -5,6 +5,7 @@ import TwitterIcon from '../../assets/twitter.png';
 import YoutubeIcon from '../../assets/youtube.png';
 import InstagramIcon from '../../assets/instagram.png';
 import emailjs from '@emailjs/browser';
+import Footer from '../Footer/Footer';
 
 
 const Contact = () => {
@@ -48,6 +49,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
+        <Footer />
     </section>
   )
 }

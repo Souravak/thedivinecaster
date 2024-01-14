@@ -1,17 +1,23 @@
 .footer-container {
+  bottom: 0;
   background-color: #222;
   color: #fff;
   padding: 20px;
+  position: relative;
   text-align: center;
+  width: 100vw;
 }
 
 .social-media-links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 2rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  /* width: 2rem; */
 }
 
+
 .social-media-links a{
-    margin: 0 0.5rem;
+    margin: 0 0;
 }

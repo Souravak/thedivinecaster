@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './Donate.css';
 import QRCodeComponent from './QRCodeComponent/QRCodeComponent';
+import Footer from '../Footer/Footer';
 
 const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState("500");
@@ -26,6 +27,7 @@ const Donate = () => {
           <button onClick={() => handleButtonClick("25000")}>25000</button>
           <button onClick={() => handleButtonClick("Other")}>Other</button>
         </div>
+        <Footer />
     </div>
   );
 };
