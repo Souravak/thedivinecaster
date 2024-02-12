@@ -56,6 +56,14 @@ const ProductDetails = [
     },
 
     {
+        name: 'Bike Mount Holder Metal Body',
+        oldPrice: '999',
+        newPrice: '249',
+        myLink: 'https://amzn.eu/d/fqMHSwK',
+        img: require('../../../assets/Gallery/mobile-holder.jpg')
+    },
+
+    {
         name: 'Cosmic Byte ARES Wireless Controller',
         oldPrice: '3,299',
         newPrice: '2,499',
