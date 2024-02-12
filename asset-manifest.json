@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/thedivinecaster/static/css/main.69f17498.css",
-    "main.js": "/thedivinecaster/static/js/main.0743585d.js",
+    "main.js": "/thedivinecaster/static/js/main.8c30a4ac.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/zebronics-zebax-ninja.jpg": "/thedivinecaster/static/media/zebronics-zebax-ninja.38f40379c19d4d535684.jpg",
+    "static/media/asus-tuf-h1-headset.jpg": "/thedivinecaster/static/media/asus-tuf-h1-headset.a1227ce853cf87600b1c.jpg",
     "static/media/setrack-gps-tracker-device.jpg": "/thedivinecaster/static/media/setrack-gps-tracker-device.b64e0265ee15e3bbd65c.jpg",
     "static/media/realme-narzo-n55.jpg": "/thedivinecaster/static/media/realme-narzo-n55.793fc8a3d9442cbf44d4.jpg",
     "static/media/amazon-basics-bt-speaker.jpg": "/thedivinecaster/static/media/amazon-basics-bt-speaker.a84dbe8f79bd31bd085c.jpg",
@@ -12,7 +13,7 @@
     "static/media/boat-wave-edge-smart-watch.jpg": "/thedivinecaster/static/media/boat-wave-edge-smart-watch.06a4cf9f066d1b17e788.jpg",
     "static/media/macbook-pro.jpg": "/thedivinecaster/static/media/macbook-pro.2c90429343565c739293.jpg",
     "static/media/boya-m1-pro-microphone.jpg": "/thedivinecaster/static/media/boya-m1-pro-microphone.8189d06ec8f117db725c.jpg",
-    "static/media/asus-tuf-h1-headset.jpg": "/thedivinecaster/static/media/asus-tuf-h1-headset.b9bc06fc4e2ec248b116.jpg",
+    "static/media/bmw-g310r.jpg": "/thedivinecaster/static/media/bmw-g310r.8d36ae00fd46752f3260.jpg",
     "static/media/zebronics-zeb-fun-karaoke-mic.jpg": "/thedivinecaster/static/media/zebronics-zeb-fun-karaoke-mic.25d040e642997d85f165.jpg",
     "static/media/tp-link-wifi-dongle.jpg": "/thedivinecaster/static/media/tp-link-wifi-dongle.a6a8368fb083d61802d9.jpg",
     "static/media/redgear-a15-gaming-mouse.jpg": "/thedivinecaster/static/media/redgear-a15-gaming-mouse.e9e3afdc233c3529bb66.jpg",
@@ -22,6 +23,8 @@
     "static/media/qr100.jpg": "/thedivinecaster/static/media/qr100.24480dab00ddc0cdc456.jpg",
     "static/media/qr2000.jpg": "/thedivinecaster/static/media/qr2000.d55fd6eccfe3a1488de8.jpg",
     "static/media/qr500.jpg": "/thedivinecaster/static/media/qr500.21a415fc366ca116baf9.jpg",
+    "static/media/Axxis-helmet-eagle-sv.jpg": "/thedivinecaster/static/media/Axxis-helmet-eagle-sv.001add9f562339bebac9.jpg",
+    "static/media/Chest-mount.jpg": "/thedivinecaster/static/media/Chest-mount.8ec33d841cf44320da62.jpg",
     "static/media/qr10.jpg": "/thedivinecaster/static/media/qr10.b8dc782245d49c7d873c.jpg",
     "static/media/qr50.jpg": "/thedivinecaster/static/media/qr50.a247c81c070107658f3b.jpg",
     "static/media/qr5.jpg": "/thedivinecaster/static/media/qr5.d7b180f4124d023ef17d.jpg",
@@ -34,6 +37,7 @@
     "static/media/cosmic-byte-ares-wireless-controller.jpg": "/thedivinecaster/static/media/cosmic-byte-ares-wireless-controller.ca424c341adde7fec4b9.jpg",
     "static/media/truke-s2-lite.jpg": "/thedivinecaster/static/media/truke-s2-lite.085069b1fc700141ac2b.jpg",
     "static/media/tp-link-wifi-range-extender.jpg": "/thedivinecaster/static/media/tp-link-wifi-range-extender.26935a2221c893dcdf9f.jpg",
+    "static/media/mobile-holder.jpg": "/thedivinecaster/static/media/mobile-holder.4003c1f77e1661fc5791.jpg",
     "static/media/redgear-canyon-gaming-keyboard.jpg": "/thedivinecaster/static/media/redgear-canyon-gaming-keyboard.76e417b2d573b7b1e0bd.jpg",
     "static/media/sandisk-ultra-usb.jpg": "/thedivinecaster/static/media/sandisk-ultra-usb.45ff623cb30fd1567702.jpg",
     "static/media/contact.png": "/thedivinecaster/static/media/contact.b317b6debe0cf1a03044.png",
@@ -43,10 +47,10 @@
     "static/media/instagram.png": "/thedivinecaster/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "index.html": "/thedivinecaster/index.html",
     "main.69f17498.css.map": "/thedivinecaster/static/css/main.69f17498.css.map",
-    "main.0743585d.js.map": "/thedivinecaster/static/js/main.0743585d.js.map"
+    "main.8c30a4ac.js.map": "/thedivinecaster/static/js/main.8c30a4ac.js.map"
   },
   "entrypoints": [
     "static/css/main.69f17498.css",
-    "static/js/main.0743585d.js"
+    "static/js/main.8c30a4ac.js"
   ]
 }
