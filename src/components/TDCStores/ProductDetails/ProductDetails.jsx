@@ -16,7 +16,31 @@ const ProductDetails = [
     },
 
     {
-        name: 'APPLE MacBook Pro',
+        name: 'BMW G310R', 
+        oldPrice: '4,36,534', 
+        newPrice: '4,30,534', 
+        myLink: 'https://www.bmw-motorrad.in/en/models/roadster/g310r.html', 
+        img: require('../../../assets/Gallery/bmw-g310r.jpg')
+    },
+
+    {
+        name: 'AXXIS Eagle SV Quirly Helmet',
+        oldPrice: '5,449', 
+        newPrice: '4,949', 
+        myLink: 'https://powersports.in/products/axxis-eagle-quirly-helmet', 
+        img: require('../../../assets/Gallery/Axxis-helmet-eagle-sv.jpg')
+    },
+
+    {
+        name: 'RS Chrono Petronas E63 Gyro',
+        oldPrice: '11,999',
+        newPrice: '9,999',
+        myLink: 'https://www.rschrono.com/products/gyro-petronas-e63-black-red-leather-strap',
+        img: require('../../../assets/Gallery/rschrono-petronas-e63-gyro.jpg')
+    },
+
+    {
+        name: 'Apple MacBook Pro',
         oldPrice: '1,99,900', 
         newPrice: '1,99,900', 
         myLink: 'https://www.flipkart.com/apple-macbook-pro-core-i7-9th-gen-16-gb-512-gb-ssd-mac-os-catalina-4-graphics-mvvl2hn-a/p/itm13937d8b1b0dc', 
@@ -51,16 +75,48 @@ const ProductDetails = [
         name: 'Logitech M590 Wireless Mouse',
         oldPrice: '9,999',
         newPrice: '10,999',
-        myLink: 'https://www.google.com',
+        myLink: 'https://www.logitech.com/en-us/products/mice/m590-silent-wireless-mouse.910-005014.html',
         img: require('../../../assets/Gallery/logitech-m590.jpg')
     },
 
     {
-        name: 'Bike Mount Holder Metal Body',
+        name: 'Logitech M221 Wireless Mouse',
+        oldPrice: '1,299',
+        newPrice: '799',
+        myLink: 'https://amzn.eu/d/gDcTILH',
+        img: require('../../../assets/Gallery/logitech-m221.jpg')
+    },
+
+    {
+        name: 'Mobile Holder for Bike Metal Body',
         oldPrice: '999',
         newPrice: '249',
         myLink: 'https://amzn.eu/d/fqMHSwK',
         img: require('../../../assets/Gallery/mobile-holder.jpg')
+    },
+
+    {
+        name: 'Xiaomi L05G Smart Speaker',
+        oldPrice: '5,999',
+        newPrice: '3,499',
+        myLink: 'https://amzn.eu/d/2BMSbc3',
+        img: require('../../../assets/Gallery/xiaomi-smart-speaker.jpg')
+    },
+
+    {
+        name: 'Chest Mount for Mobile Phone',
+        oldPrice: '999',
+        newPrice: '379',
+        myLink: 'https://amzn.eu/d/h1bFqiy',
+        img: require('../../../assets/Gallery/Chest-mount.jpg')
+    },
+
+    {
+        name: 'Selfie Stick and Tripod with Bluetooth Remote',
+        oldPrice: '1,299',
+        newPrice: '299',
+        myLink: 'https://www.flipkart.com/nafa-bluetooth-selfie-stick/p/itm97459765bd0d5',
+        img: require('../../../assets/Gallery/selfie-stick-tripod.jpg')
     },
 
     {
@@ -85,14 +141,6 @@ const ProductDetails = [
         newPrice: '1,499',
         myLink: 'https://pricehistoryapp.com/product/redgear-canyon-gaming-keyboard-with-10-led-modes-side-led-double-injected-keycaps-and-windows-keylock-gaming-keyboards',
         img: require('../../../assets/Gallery/redgear-canyon-gaming-keyboard.jpg')
-    },
-    
-    {
-        name: 'RS Chrono Petronas E63 Gyro',
-        oldPrice: '11,999',
-        newPrice: '9,999',
-        myLink: 'https://www.rschrono.com/products/gyro-petronas-e63-black-red-leather-strap',
-        img: require('../../../assets/Gallery/rschrono-petronas-e63-gyro.jpg')
     },
     
     {
@@ -173,6 +221,54 @@ const ProductDetails = [
         newPrice: '1,099',
         myLink: 'https://amzn.eu/d/ffM6xaF',
         img: require('../../../assets/Gallery/amazon-basics-bt-speaker.jpg')
+    },
+
+    {
+        name: 'Lexar NS100 2.5” SATA III (6GB/S) 256GB SSD',
+        oldPrice: '3,499',
+        newPrice: '1,599',
+        myLink: 'https://amzn.eu/d/cTTVem6',
+        img: require('../../../assets/Gallery/lexar-256gb-ssd.jpg')
+    },
+
+    {
+        name: '2.5" SATA to USB External SSD/HDD Enclosure',
+        oldPrice: '599',
+        newPrice: '299',
+        myLink: 'https://amzn.eu/d/5yk6MEr',
+        img: require('../../../assets/Gallery/transparent-ssd-enclosure.jpg')
+    },
+
+    {
+        name: 'Adjustable Metal Mobile Stand',
+        oldPrice: '699',
+        newPrice: '199',
+        myLink: 'https://amzn.eu/d/0oooPRw',
+        img: require('../../../assets/Gallery/metal-mobile-stand.jpg')
+    },
+
+    {
+        name: 'Full Face Mask for Bike Rider',
+        oldPrice: '599',
+        newPrice: '179',
+        myLink: 'https://amzn.eu/d/iqfQcA8',
+        img: require('../../../assets/Gallery/full-face-cover.jpg')
+    },
+
+    {
+        name: 'Boldfit Arm Sleeves',
+        oldPrice: '499',
+        newPrice: '279',
+        myLink: 'https://amzn.eu/d/cjBQhCe',
+        img: require('../../../assets/Gallery/arm-sleeves.jpg')
+    },
+
+    {
+        name: 'Smitch 16M RGB WiFi Smart Bulb',
+        oldPrice: '1199',
+        newPrice: '599',
+        myLink: 'https://www.flipkart.com/smitch-wi-fi-rgb-10w-b22-base-smart-bulb/p/itm093bb83725009',
+        img: require('../../../assets/Gallery/smitch-smart-bulb.jpg')
     },
 
     {
