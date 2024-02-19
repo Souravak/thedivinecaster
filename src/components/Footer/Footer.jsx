@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <div className="footer-container content">
         <div className="social-media-links">
             <a href="https://twitter.com/thedivinecaster" target="_blank" rel="noreferrer">
                 <i className="fab fa-x-twitter"></i>

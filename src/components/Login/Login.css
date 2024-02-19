@@ -1,0 +1,67 @@
+
+
+#loginPage{
+    /* margin-top: 0; */
+    /* height: 100%; */
+    /* margin-top: 30px !important; */
+    min-height: calc(100vh - 10rem);
+    width: 100vw;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 5rem; */
+    /* justify-content: center; */
+}
+
+
+.login-form{
+    padding: 6rem;
+    background: rgba(91, 91, 91, 0.103);
+    border-radius: 1rem;
+}
+
+.loginPageTitle{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+
+}
+
+.login-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.username, .password{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(40,40,40);
+}
+.login-buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+.submitBtn{
+    background: white;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    padding: 0.75rem 3.5rem;
+}
+
+.submitBtn:hover{
+    background: #c9a8a8;
+}

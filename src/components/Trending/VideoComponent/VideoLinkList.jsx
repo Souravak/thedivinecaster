@@ -17,12 +17,8 @@ const VideoLinkList = [
     'https://youtu.be/VYo-goMjTYs',
     'https://youtu.be/Z-WjY_CxbPs',
     'https://youtu.be/nmDsfhzXuX4',
-    'https://youtu.be/GfZqCLfKjic',
-    'https://youtu.be/BLuVkp0C60s',
     'https://youtu.be/GeNQ8oE-u30',
     'https://youtu.be/QL5Y-SxYEbw',
-    
-
-
+    'https://youtu.be/lWqTZWd3frQ',
 ];
 export default VideoLinkList;

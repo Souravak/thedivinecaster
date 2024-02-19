@@ -5,6 +5,8 @@ import Trending from './components/Trending/Trending';
 import TDCStores from './components/TDCStores/TDCStores';
 import Donate from './components/Donate/Donate';
 import Contact from './components/Contact/Contact';
+import Login from './components/Login/Login';
+import PrivateData from './components/PrivateData/PrivateData';
 // import Footer from './components/Footer/Footer';
 
 import NotFound from './components/NotFound/NotFound';
@@ -26,8 +28,14 @@ function App() {
         return <TDCStores />
       case 'donate':
         return <Donate />;
+      case 'login':
+        return <Login onLoginSuccess={() => setCurrentPage('private-data')} />;
+        // return <Login onLoginSuccess={handleLoginSuccess} />;
+      case 'private-data':
+        return <PrivateData />;
       case 'contact':
         return <Contact />;
+      
       default:
         return <NotFound />;
     }
