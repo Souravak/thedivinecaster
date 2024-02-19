@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.69f17498.css",
-    "main.js": "/thedivinecaster/static/js/main.5d0d2d68.js",
+    "main.css": "/thedivinecaster/static/css/main.9bd84e88.css",
+    "main.js": "/thedivinecaster/static/js/main.fa762041.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/zebronics-zebax-ninja.jpg": "/thedivinecaster/static/media/zebronics-zebax-ninja.38f40379c19d4d535684.jpg",
     "static/media/asus-tuf-h1-headset.jpg": "/thedivinecaster/static/media/asus-tuf-h1-headset.a1227ce853cf87600b1c.jpg",
@@ -44,20 +44,24 @@
     "static/media/xiaomi-smart-speaker.jpg": "/thedivinecaster/static/media/xiaomi-smart-speaker.9c4bd94decf1a7531c9a.jpg",
     "static/media/transparent-ssd-enclosure.jpg": "/thedivinecaster/static/media/transparent-ssd-enclosure.9781d1f25c4a404f6605.jpg",
     "static/media/tp-link-wifi-range-extender.jpg": "/thedivinecaster/static/media/tp-link-wifi-range-extender.26935a2221c893dcdf9f.jpg",
+    "static/media/folder-image-red.png": "/thedivinecaster/static/media/folder-image-red.85399292f14433904513.png",
+    "static/media/folder-image-purple.png": "/thedivinecaster/static/media/folder-image-purple.ef8352f2ddce35d1e30d.png",
+    "static/media/folder-image-green.png": "/thedivinecaster/static/media/folder-image-green.c456f6840d61929cb8e7.png",
     "static/media/mobile-holder.jpg": "/thedivinecaster/static/media/mobile-holder.4003c1f77e1661fc5791.jpg",
     "static/media/redgear-canyon-gaming-keyboard.jpg": "/thedivinecaster/static/media/redgear-canyon-gaming-keyboard.76e417b2d573b7b1e0bd.jpg",
     "static/media/sandisk-ultra-usb.jpg": "/thedivinecaster/static/media/sandisk-ultra-usb.45ff623cb30fd1567702.jpg",
     "static/media/contact.png": "/thedivinecaster/static/media/contact.b317b6debe0cf1a03044.png",
+    "static/media/folder-image-yellow.png": "/thedivinecaster/static/media/folder-image-yellow.7d9a04d795d0e3d31b57.png",
     "static/media/profile-picture.jpg": "/thedivinecaster/static/media/profile-picture.3d9b7650193305c2251b.jpg",
     "static/media/d-link-wifi-adapter.jpg": "/thedivinecaster/static/media/d-link-wifi-adapter.8a1bc44e8ff8288caadd.jpg",
     "static/media/vivo-v15-pro.jpg": "/thedivinecaster/static/media/vivo-v15-pro.6e1b8359c38ef10c627d.jpg",
     "static/media/instagram.png": "/thedivinecaster/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "index.html": "/thedivinecaster/index.html",
-    "main.69f17498.css.map": "/thedivinecaster/static/css/main.69f17498.css.map",
-    "main.5d0d2d68.js.map": "/thedivinecaster/static/js/main.5d0d2d68.js.map"
+    "main.9bd84e88.css.map": "/thedivinecaster/static/css/main.9bd84e88.css.map",
+    "main.fa762041.js.map": "/thedivinecaster/static/js/main.fa762041.js.map"
   },
   "entrypoints": [
-    "static/css/main.69f17498.css",
-    "static/js/main.5d0d2d68.js"
+    "static/css/main.9bd84e88.css",
+    "static/js/main.fa762041.js"
   ]
 }
