@@ -26,6 +26,9 @@ const Footer = () => {
             <a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noreferrer">
                 <i className="fab fa-telegram"></i>
             </a>
+            <a href="https://www.buymeacoffee.com/souravak" target="_blank" rel="noreferrer">
+                <i className="fa fa-coffee"></i>
+            </a>
         </div>
         <div className="all-rights-reserved">
             <span>© 2024 All Rights Reserved</span>

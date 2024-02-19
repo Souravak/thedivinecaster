@@ -8,22 +8,10 @@ import { useEffect } from 'react';
 
 
 const PrivateData = () => {
-    var time = 30;
-    time = time*60;
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-          // Refresh the page after 2 minutes
-          window.location.reload();
-        }, (time*1000)); // 2 minutes in milliseconds
-    
-        return () => {
-          // Clear the timeout when the component is unmounted or updated
-          clearTimeout(timeoutId);
-        };
-      }, []); // Empty dependency array ensures the effect runs only once after initial render
-    
+    var time = 1; // in minutes
+    time = time*60; // convert to milliseconds
+
   return (
-    // <div>PrivateData</div>
     <section id="private-data">
         <div className="private-data-title-countdown">
             <h1 className="private-data-title">Private Data</h1>

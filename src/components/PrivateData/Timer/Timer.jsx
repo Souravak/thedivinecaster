@@ -9,20 +9,21 @@ function Timer(props) {
       setTimer(prevTimer => {
         if (prevTimer === 0) {
           clearInterval(interval); // Stop the timer when it reaches 0
-          // You can add additional logic here when timer reaches 0
+          window.location.reload();
           return 0;
         }
         return prevTimer - 1;
       });
-    }, 1000); // Update timer every second
+    }, 1000); // Update
 
-    return () => clearInterval(interval); // Cleanup function to clear the interval
-  }, [props.initialTimer]); // Re-run effect when initialTimer prop changes
+    return () => clearInterval(interval); 
+  }, [props.initialTimer]);
 
   return (
-    <>
-      <span className="timer">{timer}</span>
-    </>
+    <div className="timer-container"> {/* Add container for consistent width */}
+      <span className="timer">{timer.toString().padStart(2, '0')}</span> {/* Ensure consistent width with leading zero */}
+      <span className="seconds-left">seconds left</span>
+    </div>
   );
 }
 
