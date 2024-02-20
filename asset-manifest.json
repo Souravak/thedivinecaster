@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.9bd84e88.css",
-    "main.js": "/thedivinecaster/static/js/main.fa762041.js",
+    "main.css": "/thedivinecaster/static/css/main.847aed15.css",
+    "main.js": "/thedivinecaster/static/js/main.be749f18.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/zebronics-zebax-ninja.jpg": "/thedivinecaster/static/media/zebronics-zebax-ninja.38f40379c19d4d535684.jpg",
     "static/media/asus-tuf-h1-headset.jpg": "/thedivinecaster/static/media/asus-tuf-h1-headset.a1227ce853cf87600b1c.jpg",
@@ -57,11 +57,11 @@
     "static/media/vivo-v15-pro.jpg": "/thedivinecaster/static/media/vivo-v15-pro.6e1b8359c38ef10c627d.jpg",
     "static/media/instagram.png": "/thedivinecaster/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "index.html": "/thedivinecaster/index.html",
-    "main.9bd84e88.css.map": "/thedivinecaster/static/css/main.9bd84e88.css.map",
-    "main.fa762041.js.map": "/thedivinecaster/static/js/main.fa762041.js.map"
+    "main.847aed15.css.map": "/thedivinecaster/static/css/main.847aed15.css.map",
+    "main.be749f18.js.map": "/thedivinecaster/static/js/main.be749f18.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bd84e88.css",
-    "static/js/main.fa762041.js"
+    "static/css/main.847aed15.css",
+    "static/js/main.be749f18.js"
   ]
 }
