@@ -2,13 +2,13 @@ import React from 'react';
 import PrivateDataComponent from './PrivateDataComponent';
 import Timer from './Timer/Timer';
 import './PrivateData.css';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 
 
 
 const PrivateData = () => {
-    var time = 1; // in minutes
+    var time = 100; // in minutes
     time = time*60; // convert to milliseconds
 
   return (

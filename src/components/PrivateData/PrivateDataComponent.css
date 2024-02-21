@@ -61,3 +61,23 @@
     transition: all 0.2s ease-in;
     outline: none;
 }
+.logout-button{
+    font-size: 0.8rem;
+    margin: 0.3rem;
+    padding: 0.4rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #ff0000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    outline: none;
+}
+
+.data-item-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* justify-content: center; */
+    margin: 0 4rem;
+}

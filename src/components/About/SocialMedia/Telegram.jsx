@@ -3,11 +3,11 @@ import Verified from './Verified/Verified';
 import ProfilePicture from '../../../assets/images/profile-picture.jpg';
 import './Telegram.css';
 
-const Telegram = () => {
+const Telegram = ({data}) => {
   return (
     <div className="social-item">
       <div className="social-item-box">
-        <div className="social-item-title"><i class="fa-brands fa-telegram" style={{color:"royalblue"}}></i>thedivinecaster<Verified /></div>
+        <div className="social-item-title"><i className="fa-brands fa-telegram" style={{color:"royalblue"}}></i>thedivinecaster<Verified /></div>
         <div className="social-item-pic-counter">
           <img src={ProfilePicture} alt="" className="profile-picture"/>
           <div className="channel-data">
@@ -19,32 +19,32 @@ const Telegram = () => {
             <div className="channel-details-item">Details</div>
             <div className="channel-details-item">
                 <span className="telegram-inner-item">
-                    <span className="telegram-inner-inner-item"><i class="fa fa-user-plus" aria-hidden="true"></i>Subscribers</span>
-                    <span>212</span>
+                    <span className="telegram-inner-inner-item"><i className="fa fa-user-plus" aria-hidden="true"></i>Subscribers</span>
+                    <span>{data.subscribers}</span>
                 </span>
             </div>
             <div className="channel-details-item">
                 <span className="telegram-inner-item">
-                    <span className="telegram-inner-inner-item"><i class="fas fa-plus-circle" aria-hidden="true"></i>Created</span>
-                    <span>3 Years ago</span>
+                    <span className="telegram-inner-inner-item"><i className="fas fa-plus-circle" aria-hidden="true"></i>Created</span>
+                    <span>{data.yearsago} Years ago</span>
                 </span>
             </div>
             <div className="channel-details-item">
                 <span className="telegram-inner-item">
-                    <span className="telegram-inner-inner-item"><i class="fas fa-user-shield"></i>Administrators</span>
-                    <span>4</span>
+                    <span className="telegram-inner-inner-item"><i className="fas fa-user-shield"></i>Administrators</span>
+                    <span>{data.admin}</span>
                 </span>
             </div>
             <div className="channel-details-item">
                 <span className="telegram-inner-item">
-                    <span className="telegram-inner-inner-item"><i class="far fa-comments"></i>Total Messages</span>
-                    <span>462</span>
+                    <span className="telegram-inner-inner-item"><i className="far fa-comments"></i>Total Messages</span>
+                    <span>{data.messages}</span>
                 </span>
             </div>
             <div className="channel-details-item">
                 <span className="telegram-inner-item">
-                    <span className="telegram-inner-inner-item"><i class="fa fa-users"></i>Groups</span>
-                    <span>2</span>
+                    <span className="telegram-inner-inner-item"><i className="fa fa-users"></i>Groups</span>
+                    <span>{data.groups}</span>
                 </span>
             </div>
         </div>

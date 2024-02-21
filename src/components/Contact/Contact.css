@@ -1,6 +1,6 @@
 #contactPage{
     /* margin-top: 0; */
-    margin-top: 30px !important;
+    /* margin-top: 30px !important; */
     /* min-height: calc(100vh - 4rem); */
     width: 100vw;
     max-width: 60rem;
@@ -15,7 +15,7 @@
 .contactPageTitle{
     font-size: 2rem;
     font-weight: 700;
-    margin: 0;
+    margin: 0.5rem;
 
 }
 

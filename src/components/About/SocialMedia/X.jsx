@@ -7,7 +7,7 @@ const X = () => {
     return (
         <div className="social-item">
             <div className="social-item-box">
-                <div className="social-item-title"><i class="fa-brands fa-x-twitter" ></i>thedivinecaster<Verified /></div>
+                <div className="social-item-title"><i className="fa-brands fa-x-twitter" ></i>thedivinecaster<Verified /></div>
                 <div className="social-item-pic-counter">
                     <img src={ProfilePicture} alt="" className="profile-picture"/>
                     <div className="channel-data">
@@ -21,12 +21,12 @@ const X = () => {
                     </div>
                 </div>
                 <div className="channel-details">
-                    <div className="channel-details-item"><i class="fa fa-link"></i><span className="view-email-address"><a href="mailto:someone@example.com" target="_blank" rel="noopener noreferrer">Connect Now</a></span></div>
-                    <div className="channel-details-item"><i class="fa fa-users" aria-hidden="true"></i>448 followers</div>
-                    <div className="channel-details-item"><i class="fa fa-twitter"></i>48 Tweets</div>
-                    <div className="channel-details-item"><i class="fa fa-retweet"></i>20 Retweets</div>
-                    <div className="channel-details-item"><i class="fa fa-calendar"></i>Joined November 2022</div>
-                    <div className="channel-details-item"><i class="fa fa-globe"></i>Kerala, India</div>
+                    <div className="channel-details-item"><i className="fa fa-link"></i><span className="view-email-address"><a href="mailto:someone@example.com" target="_blank" rel="noopener noreferrer">Connect Now</a></span></div>
+                    <div className="channel-details-item"><i className="fa fa-users" aria-hidden="true"></i>448 followers</div>
+                    <div className="channel-details-item"><i className="fa fa-twitter"></i>48 Tweets</div>
+                    <div className="channel-details-item"><i className="fa fa-retweet"></i>20 Retweets</div>
+                    <div className="channel-details-item"><i className="fa fa-calendar"></i>Joined November 2022</div>
+                    <div className="channel-details-item"><i className="fa fa-globe"></i>Kerala, India</div>
                 </div>
                 
             </div>

@@ -17,9 +17,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px;
+    margin: 0 5rem;
+    /* flex: 1; */
+    /* justify-content: left; */
+    /* gap: 5px; */
     justify-content: center;
-    align-items: center;
+    /* margin: 2rem; */
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+    /* justify-content:flex-start; */
+    /* justify-self: baseline; */
+    /* align-items: center; */
 }
 .image-card{
     

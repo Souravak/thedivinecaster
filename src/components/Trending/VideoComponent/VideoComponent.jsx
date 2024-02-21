@@ -13,8 +13,7 @@ const VideoComponent = ({ VideoLinkList }) => {
         src={`https://www.youtube.com/embed/${link}?autoplay=0&mute=0`} title="Lost 10,000" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen
-        frameborder="5">
+        allowfullscreen>
         </iframe>
       ))}
     </>

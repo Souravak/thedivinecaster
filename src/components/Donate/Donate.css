@@ -12,3 +12,29 @@
     font-weight: 700;
     margin: 0;
 }
+.donate-amount-button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3rem;
+}
+
+.donate-amount-button button{
+    margin: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    width: 2rem;
+    text-align: center;
+    flex: 0 0 15%;
+    transition: all 0.3s ease;
+}
+
+.donate-amount-button button:hover{
+    background-color: #218838;
+}

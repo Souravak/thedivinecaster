@@ -28,22 +28,3 @@
 .qr-amount{
     text-align: center;
 }
-.donate-amount-button{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.donate-amount-button button{
-    margin: 0.5rem;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    cursor: pointer;
-    color: #fff;
-    background-color: #28a745;
-    border: none;
-    width: 3rem;
-    text-align: center;
-    flex: 0 0 15%;
-}

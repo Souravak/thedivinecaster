@@ -18,9 +18,17 @@
 
 
 .login-form{
-    padding: 6rem;
+    /* margin: 5rem; */
+    padding: 4rem;
     background: rgba(91, 91, 91, 0.103);
     border-radius: 1rem;
+}
+
+.login-description{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .loginPageTitle{
@@ -33,10 +41,12 @@
 .login-inputs{
     display: flex;
     flex-direction: column;
+    width: 24rem;
+    height: 10rem;
 }
 .username, .password{
     font-size: medium;
-    width: 100%;
+    /* width: 100%; */
     max-width: 40rem;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
@@ -50,8 +60,7 @@
     align-items: center;
     gap: 1rem;
     justify-content: center;
-    margin: 1rem;
-
+    margin: 0rem;
 }
 
 .submitBtn{

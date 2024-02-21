@@ -18,6 +18,10 @@ const PrivateDataComponent = () => {
     sortData(event.target.value);
   };
 
+  const handleLogout = () => {
+    window.location.reload();
+  }
+
   const sortData = (sortBy) => {
     let sorted;
     switch (sortBy) {
@@ -48,30 +52,33 @@ const PrivateDataComponent = () => {
           <option value="title">Sort by Name</option>
           <option value="priority">Sort by Priority</option>
         </select>
+        <button className="btn btn-danger logout-button" onClick={handleLogout}>Logout</button>
       </div>
-      {sortedData.map(item => (
-        <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.id}>
-          <div className="data-item-container">
-            <div className="data-item">
-              <div className="data-title">{item.title}</div>
-              <div className="data-image">
-                {(() => {
-                  switch (item.priority) {
-                    case 'high':
-                      return <img src={folderImageRed} alt="" />;
-                    case 'medium':
-                      return <img src={folderImageGreen} alt="" />;
-                    case 'low':
-                      return <img src={folderImageYellow} alt="" />;
-                    default:
-                      return <img src={folderImagePurple} alt="" />;
-                  }
-                })()}
+      <div className="data-item-box">
+        {sortedData.map(item => (
+          <a href={item.link} target="_blank" rel="noopener noreferrer" key={item.id}>
+            <div className="data-item-container">
+              <div className="data-item">
+                <div className="data-title">{item.title}</div>
+                <div className="data-image">
+                  {(() => {
+                    switch (item.priority) {
+                      case 'high':
+                        return <img src={folderImageRed} alt="" />;
+                      case 'medium':
+                        return <img src={folderImageGreen} alt="" />;
+                      case 'low':
+                        return <img src={folderImageYellow} alt="" />;
+                      default:
+                        return <img src={folderImagePurple} alt="" />;
+                    }
+                  })()}
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-      ))}
+          </a>
+        ))}
+      </div>
     </>
   );
 };

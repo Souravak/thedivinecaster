@@ -3,11 +3,11 @@ import Verified from './Verified/Verified';
 import ProfilePicture from '../../../assets/images/profile-picture.jpg';
 import './WhatsApp.css';
 
-const WhatsApp = () => {
+const WhatsApp = ({data}) => {
     return (
         <div className="social-item">
             <div className="social-item-box">
-                <div className="social-item-title"><i class="fa-brands fa-whatsapp" style={{color:"#25D366"}}></i>thedivinecaster<Verified /></div>
+                <div className="social-item-title"><i className="fa-brands fa-whatsapp" style={{color:"#25D366"}}></i>thedivinecaster<Verified /></div>
                 <div className="social-item-pic-counter">
                     <img src={ProfilePicture} alt="" className="profile-picture"/>
                     <div className="channel-data">
@@ -16,17 +16,17 @@ const WhatsApp = () => {
                         <div className="channel-status">
                             <span className="subscriber-count">Channel</span>
                             <span> ‧ </span>
-                            <span className="video-count">208 followers</span>
+                            <span className="video-count">{data.followers} followers</span>
                         </div>
                     </div>
                 </div>
                 <div className="channel-details">
-                    <div className="channel-details-item"><i class="fa fa-envelope-o"></i><span className="view-email-address"><a href="mailto:someone@example.com" target="_blank" rel="noopener noreferrer">Send an email</a></span></div>
-                    <div className="channel-details-item"><i class="fas fa-globe"></i>Public Channel</div>
-                    <div className="channel-details-item"><i class="fa fa-users" aria-hidden="true"></i>208 followers</div>
-                    <div className="channel-details-item"><i class="fa fa-video-camera"></i>20 videos</div>
-                    <div className="channel-details-item"><i class="fa fa-thumbs-up"></i>794 likes</div>
-                    <div className="channel-details-item"><i class="fa fa-globe"></i>Kerala, India</div>
+                    <div className="channel-details-item"><i className="fa fa-envelope-o"></i><span className="view-email-address"><a href="mailto:someone@example.com" target="_blank" rel="noopener noreferrer">Send an email</a></span></div>
+                    <div className="channel-details-item"><i className="fas fa-globe"></i>Public Channel</div>
+                    <div className="channel-details-item"><i className="fa fa-users" aria-hidden="true"></i>{data.followers}     followers</div>
+                    <div className="channel-details-item"><i className="fa fa-video-camera"></i>{data.videos} videos</div>
+                    <div className="channel-details-item"><i className="fa fa-thumbs-up"></i>{data.likes} likes</div>
+                    <div className="channel-details-item"><i className="fa fa-globe"></i>{data.location}</div>
                 </div>
                 
             </div>
