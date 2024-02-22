@@ -59,12 +59,13 @@ const fetchSocialMediaDataFromFirestore = async () => {
 function App() {
   
   const [isUnderMaintenance, setIsUnderMaintenance] = useState(false);
-
+  const [code, setCode] = useState('');
   useEffect(() => {
     fetchControllerDataFromFirestore().then(data => {
       sessionStorage.setItem('controllerData', JSON.stringify(data));
-      if (data && data.run === 'offline') {
+      if ((data && data.run === 'offline') || (data && data.run === '404') ) {
         setIsUnderMaintenance(true);
+        setCode(data.run)
       }
       }).catch(error => {
         console.error("Error fetching controller data:", error);
@@ -106,7 +107,7 @@ function App() {
   return (
     <div>
       {isUnderMaintenance ? (
-        <MaintainancePage />
+        <MaintainancePage code={code}/>
       ) : <><Navbar setCurrentPage={setCurrentPage} /> {renderPage()}</>}
     </div>
   );
