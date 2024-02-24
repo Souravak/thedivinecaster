@@ -8,7 +8,8 @@ import './PrivateData.css';
 
 
 const PrivateData = () => {
-    var time = 100; // in minutes
+  const controllerData = JSON.parse(sessionStorage.getItem('controllerData'))
+    var time = +controllerData.duration; // in minutes
     time = time*60; // convert to milliseconds
 
   return (

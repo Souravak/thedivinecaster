@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer';
 const Trending = () => {
   return (
     <div className="trending-container">
-      <div class="videos-container">
+      <div className="videos-container">
         <div className="video-item">
           <VideoComponent VideoLinkList={VideoLinkList}/>
         </div>

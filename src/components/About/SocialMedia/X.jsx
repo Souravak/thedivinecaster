@@ -3,7 +3,7 @@ import Verified from './Verified/Verified';
 import ProfilePicture from '../../../assets/images/profile-picture.jpg';
 import './X.css';
 
-const X = () => {
+const X = ({data}) => {
     return (
         <div className="social-item">
             <div className="social-item-box">
@@ -14,17 +14,17 @@ const X = () => {
                         <div className="channel-name">TheDIVINEcasteR</div>
                         <div className="channel-id"><a href="https://twitter.com/thedivinecaster" target="_blank" rel="noopener noreferrer">@TheDIVINEcasteR</a></div>
                         <div className="channel-status">
-                            <span className="subscriber-count">48 tweets</span>
+                            <span className="subscriber-count">{data.tweets} tweets</span>
                             <span> ‧ </span>
-                            <span className="video-count">448 followers</span>
+                            <span className="video-count">{data.followers} followers</span>
                         </div>
                     </div>
                 </div>
                 <div className="channel-details">
                     <div className="channel-details-item"><i className="fa fa-link"></i><span className="view-email-address"><a href="mailto:someone@example.com" target="_blank" rel="noopener noreferrer">Connect Now</a></span></div>
-                    <div className="channel-details-item"><i className="fa fa-users" aria-hidden="true"></i>448 followers</div>
-                    <div className="channel-details-item"><i className="fa fa-twitter"></i>48 Tweets</div>
-                    <div className="channel-details-item"><i className="fa fa-retweet"></i>20 Retweets</div>
+                    <div className="channel-details-item"><i className="fa fa-users" aria-hidden="true"></i>{data.followers} followers</div>
+                    <div className="channel-details-item"><i className="fa fa-twitter"></i>{data.tweets} Tweets</div>
+                    <div className="channel-details-item"><i className="fa fa-retweet"></i>{data.retweets} Retweets</div>
                     <div className="channel-details-item"><i className="fa fa-calendar"></i>Joined November 2022</div>
                     <div className="channel-details-item"><i className="fa fa-globe"></i>Kerala, India</div>
                 </div>

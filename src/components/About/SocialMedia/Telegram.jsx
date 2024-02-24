@@ -26,7 +26,7 @@ const Telegram = ({data}) => {
             <div className="channel-details-item">
                 <span className="telegram-inner-item">
                     <span className="telegram-inner-inner-item"><i className="fas fa-plus-circle" aria-hidden="true"></i>Created</span>
-                    <span>{data.yearsago} Years ago</span>
+                    <span>3 Years ago</span>
                 </span>
             </div>
             <div className="channel-details-item">
@@ -44,7 +44,7 @@ const Telegram = ({data}) => {
             <div className="channel-details-item">
                 <span className="telegram-inner-item">
                     <span className="telegram-inner-inner-item"><i className="fa fa-users"></i>Groups</span>
-                    <span>{data.groups}</span>
+                    <span>3</span>
                 </span>
             </div>
         </div>

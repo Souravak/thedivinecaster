@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './Navbar.css';
+// import AdminPanelLogin from '../AdminPanelLogin/AdminPanelLogin';
 import logo from '../../assets/logo.png';
 import contactImg from '../../assets/contact.png';
 // import {Link} from 'react-scroll';
@@ -24,9 +25,10 @@ const Navbar = ({ setCurrentPage }) => {
           <button onClick={() => handleNavClick('tdcstores')} className={`desktopMenuListItem item ${activeNav === 'tdcstores' ? 'active' : ''}`}>TDC Stores</button>
           <button onClick={() => handleNavClick('donate')} className={`desktopMenuListItem item ${activeNav === 'donate' ? 'active' : ''}`}>Donate</button>
           <button onClick={() => handleNavClick('login')} className={`desktopMenuListItem item ${activeNav === 'login' ? 'active' : ''}`}>Data</button>
+          <button onClick={() => handleNavClick('admin-panel-login')} className={`desktopMenuListItem item ${activeNav === 'admin-panel-login' ? 'active' : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
         </div>
         <button style={{borderRadius: "5rem", outline: "0",border: "0",padding: "5px 1rem"}} onClick={() => handleNavClick('contact')} className={`${activeNav === 'contact' ? '' : ''}`} >
-            <img src={contactImg} alt="" className="desktopMenuImg" />&nbsp;Contact Me
+          <img src={contactImg} alt="" className="desktopMenuImg" />&nbsp;Contact Me
         </button>
         <img src={menu} alt="Menu" className='mobMenu'onClick={() => setShowMenu(!showMenu)} />
         <div className="navMenu" style={{display: showMenu? 'flex':'none'}}>
@@ -35,7 +37,8 @@ const Navbar = ({ setCurrentPage }) => {
           <button onClick={() => handleNavClick('trending')} className={`listItem ${activeNav === 'trending' ? 'active' : ''}`}>Trending</button>
           <button onClick={() => handleNavClick('tdcstores')} className={`listItem ${activeNav === 'tdcstores' ? 'active' : ''}`}>TDC Stores</button>
           <button onClick={() => handleNavClick('donate')} className={`listItem ${activeNav === 'donate' ? 'active' : ''}`}>Donate</button>
-          <button onClick={() => handleNavClick('login')} className={`listItem ${activeNav === 'donate' ? 'active' : ''}`}>Data</button>
+          <button onClick={() => handleNavClick('login')} className={`listItem ${activeNav === 'login' ? 'active' : ''}`}>Data</button>
+          <button onClick={() => handleNavClick('admin-panel-login')} className={`listItem ${activeNav === 'admin-panel-login' ? 'active' : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
         </div>
     </nav>
   )

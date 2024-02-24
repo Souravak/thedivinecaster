@@ -25,8 +25,8 @@ const Facebook = ({data}) => {
                     <div className="channel-details-item"><i className="fa fa-users" aria-hidden="true"></i>{data.friends} Friends</div>
                     <div className="channel-details-item"><i className="fa fa-sticky-note-o "></i>{data.posts} Posts</div>
                     <div className="channel-details-item"><i className="fa fa-thumbs-up"></i>{data.likes} likes</div>
-                    <div className="channel-details-item"><i className="fa fa-calendar"></i>{data.joined}</div>
-                    <div className="channel-details-item"><i className="fa fa-globe"></i>{data.location}</div>
+                    <div className="channel-details-item"><i className="fa fa-calendar"></i>Joined December 2020</div>
+                    <div className="channel-details-item"><i className="fa fa-globe"></i>Kerala, India</div>
                 </div>
                 
             </div>

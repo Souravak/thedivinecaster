@@ -23,10 +23,10 @@ const WhatsApp = ({data}) => {
                 <div className="channel-details">
                     <div className="channel-details-item"><i className="fa fa-envelope-o"></i><span className="view-email-address"><a href="mailto:someone@example.com" target="_blank" rel="noopener noreferrer">Send an email</a></span></div>
                     <div className="channel-details-item"><i className="fas fa-globe"></i>Public Channel</div>
-                    <div className="channel-details-item"><i className="fa fa-users" aria-hidden="true"></i>{data.followers}     followers</div>
-                    <div className="channel-details-item"><i className="fa fa-video-camera"></i>{data.videos} videos</div>
+                    <div className="channel-details-item"><i className="fa fa-users" aria-hidden="true"></i>{data.followers} followers</div>
+                    <div className="channel-details-item"><i className="fa fa-video-camera"></i>{data.posts} posts</div>
                     <div className="channel-details-item"><i className="fa fa-thumbs-up"></i>{data.likes} likes</div>
-                    <div className="channel-details-item"><i className="fa fa-globe"></i>{data.location}</div>
+                    <div className="channel-details-item"><i className="fa fa-globe"></i>Kerala, India</div>
                 </div>
                 
             </div>

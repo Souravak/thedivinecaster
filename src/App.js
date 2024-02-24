@@ -8,6 +8,8 @@ import Contact from './components/Contact/Contact';
 import Login from './components/Login/Login';
 import PrivateData from './components/PrivateData/PrivateData';
 import MaintainancePage from './components/MaintainancePage/MaintainancePage';
+import AdminPanelLogin from './components/AdminPanelLogin/AdminPanelLogin';
+import AdminPanel from './components/AdminPanel/AdminPanel';
 // import Footer from './components/Footer/Footer';
 
 import NotFound from './components/NotFound/NotFound';
@@ -36,10 +38,10 @@ const fetchControllerDataFromFirestore = async () => {
   const controllerRef = db.collection('controller').doc('status');
   const doc = await controllerRef.get();
   if (doc.exists) {
-      return doc.data();
+    return doc.data();
   } else {
-      console.log("No such document!");
-      return null;
+    console.log("No such document!");
+    return null;
   }
 };
 
@@ -98,7 +100,10 @@ function App() {
         return <PrivateData />;
       case 'contact':
         return <Contact />;
-        
+      case 'admin-panel-login':
+        return <AdminPanelLogin onAdminLoginSuccess={() => setCurrentPage('admin-panel')} />;
+      case 'admin-panel':
+          return <AdminPanel />;
       default:
         return <NotFound />;
     }

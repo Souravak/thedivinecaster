@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
-import { initializeApp } from 'firebase/app'; // Import initializeApp directly
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'; // Import Firebase authentication module
 
-import './Login.css';
+import { initializeApp } from 'firebase/app'; 
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'; 
+import './AdminPanelLogin.css';
+
 const firebaseConfig = {
     apiKey: "AIzaSyCvafXWcjByZCRfX9G4hfU1RZ0vU84sKFM",
     authDomain: "thedivinecaster-877cc.firebaseapp.com",
@@ -13,29 +14,24 @@ const firebaseConfig = {
     appId: "1:293556884205:web:927adc85f21909063572e4",
     measurementId: "G-194H2WERR6"
 };
-
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app); // Get authentication instance
+const auth = getAuth(app); 
 
-const Login = ({ onLoginSuccess }) => {
+const AdminPanelLogin = ({ onAdminLoginSuccess }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = async () => {
         try {
-            const email = username + '@gmail.com';
-            const response = await signInWithEmailAndPassword(auth, email, password);
-            if (response.user) {
-                // User is authenticated, you can perform additional actions here if needed
-                const controllerData = JSON.parse(sessionStorage.getItem('controllerData'))
-                var time = +controllerData.duration; // in minutes
-                time = time*60; // convert to milliseconds
-                alert('Auto Logout in '+time+' seconds');
-                onLoginSuccess();
+            const email = username + '@thedivinecaster.com';
+            if(username === 'admin'){
+                const response = await signInWithEmailAndPassword(auth, email, password);
+                if (response.user) {
+                    onAdminLoginSuccess();
+                }
             }
         } catch (error) {
-            alert('You are not authorized to view data');
+            alert('You are not authorized to update data');
             window.location.reload();
             console.error('Authentication Error:', error);
         }
@@ -49,10 +45,10 @@ const Login = ({ onLoginSuccess }) => {
     return (
         <>
             <section id="loginPage">
-                <h1 className="loginPageTitle">Login</h1>
+                <h1 className="loginPageTitle">Admin Login</h1>
                 <div className="login-form">
                     <div className="login-description">
-                        Please enter username and password
+                        Please enter Admin Name and Password
                     </div>
                     <div className="login-inputs">
                         <input type="text" className="username" placeholder="Username" name="username" id="username" value={username} onChange={(e) => setUsername(e.target.value)}/>
@@ -69,4 +65,4 @@ const Login = ({ onLoginSuccess }) => {
     );
 };
 
-export default Login;
+export default AdminPanelLogin
