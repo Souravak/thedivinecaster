@@ -1,7 +1,8 @@
 import React from 'react';
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture.jpg';
 import './Facebook.css';
+import '../SocialMedia.css';
 
 const Facebook = ({data}) => {
     return (
@@ -30,8 +31,8 @@ const Facebook = ({data}) => {
                 </div>
                 
             </div>
-            <div className="join-facebook-button">
-                <a href="https://www.facebook.com/tdcthedivinecaster" target="_blank" rel="noopener noreferrer" className="join-facebook-item-button">
+            <div className="join-social-media-button">
+                <a href="https://www.facebook.com/tdcthedivinecaster" target="_blank" rel="noopener noreferrer" className="join-facebook-item-button join-social-media-item-button">
                     <span className="join-facebook-button-header">Friend Request</span>
                 </a>
             </div>

@@ -1,7 +1,8 @@
 import React from 'react';
 import './Threads.css';
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture.jpg';
+import '../SocialMedia.css';
 
 const Threads = ({data}) => {
     return (
@@ -45,8 +46,8 @@ const Threads = ({data}) => {
                 <div className="bio-line">#Creating Virtual Gaming World</div>
             </div>
         </div>
-        <div className="follow-threads-button">
-            <a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noopener noreferrer" className="follow-threads-item-button">
+        <div className="join-social-media-button">
+            <a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noopener noreferrer" className="follow-threads-item-button join-social-media-item-button">
                 <span className="follow-threads-button-header">Follow Now</span>
             </a>
         </div>

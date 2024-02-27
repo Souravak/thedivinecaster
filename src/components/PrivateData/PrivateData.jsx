@@ -2,7 +2,6 @@ import React from 'react';
 import PrivateDataComponent from './PrivateDataComponent';
 import Timer from './Timer/Timer';
 import './PrivateData.css';
-// import { useEffect } from 'react';
 
 
 

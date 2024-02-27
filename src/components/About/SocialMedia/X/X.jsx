@@ -1,7 +1,8 @@
 import React from 'react';
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture.jpg';
 import './X.css';
+import '../SocialMedia.css';
 
 const X = ({data}) => {
     return (
@@ -30,8 +31,8 @@ const X = ({data}) => {
                 </div>
                 
             </div>
-            <div className="join-x-channel-button">
-                <a href="https://twitter.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="join-x-channel-item-button">
+            <div className="join-social-media-button">
+                <a href="https://twitter.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="join-x-channel-item-button join-social-media-item-button">
                     <span className="join-x-channel-button-header">Follow Now</span>
                 </a>
             </div>

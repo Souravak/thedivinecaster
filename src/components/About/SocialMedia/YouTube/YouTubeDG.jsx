@@ -1,10 +1,10 @@
 import React from 'react';
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture-dg.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture-dg.jpg';
 import './YouTube.css';
+import '../SocialMedia.css';
 
 const YouTube = ({ data }) => {
-  // console.log("Youtube Props : ", data.subscribers);
   return (
     <div className="social-item">
       <div className="social-item-box">
@@ -30,8 +30,8 @@ const YouTube = ({ data }) => {
           <div className="channel-details-item"><i className="fa fa-globe"></i>Kerala, India</div>
         </div>
       </div>
-      <div className="subscribe-youtube-button">
-        <a href="https://www.youtube.com/@divinesgaming" target="_blank" rel="noopener noreferrer" className="subscribe-youtube-item-button">
+      <div className="join-social-media-button">
+        <a href="https://www.youtube.com/@divinesgaming" target="_blank" rel="noopener noreferrer" className="subscribe-youtube-item-button join-social-media-item-button">
             <span className="subscribe-youtube-button-header">Subscribe</span>
         </a>
       </div>

@@ -1,0 +1,12 @@
+.telegram-inner-item{
+    display: flex;
+    width: 15rem;
+}
+
+.telegram-inner-inner-item{
+    width: 10rem;
+}
+
+.join-channel-item-button{
+    background: royalblue;
+}

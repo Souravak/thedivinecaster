@@ -1,7 +1,8 @@
 import React from 'react';
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture.jpg';
 import './WhatsApp.css';
+import '../SocialMedia.css';
 
 const WhatsApp = ({data}) => {
     return (
@@ -30,8 +31,8 @@ const WhatsApp = ({data}) => {
                 </div>
                 
             </div>
-            <div className="join-whatsapp-channel-button">
-                <a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noopener noreferrer" className="join-whatsapp-channel-item-button">
+            <div className="join-social-media-button">
+                <a href="https://whatsapp.com/channel/0029VaA8FXd0LKZEC4MqFZ2S" target="_blank" rel="noopener noreferrer" className="join-whatsapp-channel-item-button join-social-media-item-button">
                     <span className="join-whatsapp-channel-button-header">Join Channel</span>
                 </a>
             </div>

@@ -10,26 +10,14 @@ import PrivateData from './components/PrivateData/PrivateData';
 import MaintainancePage from './components/MaintainancePage/MaintainancePage';
 import AdminPanelLogin from './components/AdminPanelLogin/AdminPanelLogin';
 import AdminPanel from './components/AdminPanel/AdminPanel';
-// import Footer from './components/Footer/Footer';
 
 import NotFound from './components/NotFound/NotFound';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import firebaseConfig from './FirebaseConfig/FirebaseConfig';
 import './App.css';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCvafXWcjByZCRfX9G4hfU1RZ0vU84sKFM",
-    authDomain: "thedivinecaster-877cc.firebaseapp.com",
-    projectId: "thedivinecaster-877cc",
-    storageBucket: "thedivinecaster-877cc.appspot.com",
-    messagingSenderId: "293556884205",
-    appId: "1:293556884205:web:927adc85f21909063572e4",
-    measurementId: "G-194H2WERR6"
-};
 
 firebase.initializeApp(firebaseConfig);
 
@@ -61,37 +49,85 @@ const fetchSocialMediaDataFromFirestore = async () => {
 function App() {
   
   const [isUnderMaintenance, setIsUnderMaintenance] = useState(false);
-  const [code, setCode] = useState('');
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetchControllerDataFromFirestore().then(data => {
-      sessionStorage.setItem('controllerData', JSON.stringify(data));
-      if ((data && data.run === 'offline') || (data && data.run === '404') ) {
-        setIsUnderMaintenance(true);
-        setCode(data.run)
-      }
-      }).catch(error => {
+    fetchControllerDataFromFirestore()
+      .then(data => {
+        sessionStorage.setItem('controllerData', JSON.stringify(data));
+        if ((data && data.run === 'offline') || (data && data.run === '404')) {
+          setIsUnderMaintenance(true);
+        }
+      })
+      .catch(error => {
         console.error("Error fetching controller data:", error);
+      })
+      .finally(() => {
+        setLoading(false); // Set loading to false regardless of success or failure
       });
-
-    fetchSocialMediaDataFromFirestore().then(data => {
-      sessionStorage.setItem('socialMediaData', JSON.stringify(data));
-    }).catch(error => {
-      console.error("Error fetching social media data:", error);
-    });
-  }, []);
-
-  const [currentPage, setCurrentPage] = useState('home');
   
+    
+      fetchSocialMediaDataFromFirestore()
+      .then(data => {
+        sessionStorage.setItem('socialMediaData', JSON.stringify(data));
+      })
+      .catch(error => {
+        console.error("Error fetching social media data:", error);
+      })
+      .finally(() => {
+        setLoading(false); // Set loading to false regardless of success or failure
+      });
+  }, []);
+  
+  const [currentPage, setCurrentPage] = useState('home');
   const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+      case 'about':
+      case 'trending':
+      case 'tdcstores':
+      case 'donate':
+      case 'login':
+      case 'private-data':
+      case 'contact':
+      case 'admin-panel-login':
+      case 'admin-panel':
+        return loading ? (
+          <div className="loading-animation">
+            <div className="spinner"></div>
+            <p>Loading...</p>
+          </div>
+        ) : (
+          <RenderAfterLoading />
+        );
+      default:
+        return <NotFound />;
+    }
+  };
+
+  const RenderAfterLoading = () => {
+    const [showPage, setShowPage] = useState(false);
+
+    useEffect(() => {
+      const timeout = setTimeout(() => {
+        setShowPage(true);
+      }, 10); // 1 second delay
+
+      return () => clearTimeout(timeout);
+    }, []);
+
+    return showPage ? getPageComponent() : null;
+  };
+
+  const getPageComponent = () => {
     switch (currentPage) {
       case 'home':
         return <Home />;
       case 'about':
         return <About />;
       case 'trending':
-        return <Trending />
+        return <Trending />;
       case 'tdcstores':
-        return <TDCStores />
+        return <TDCStores />;
       case 'donate':
         return <Donate />;
       case 'login':
@@ -103,7 +139,7 @@ function App() {
       case 'admin-panel-login':
         return <AdminPanelLogin onAdminLoginSuccess={() => setCurrentPage('admin-panel')} />;
       case 'admin-panel':
-          return <AdminPanel />;
+        return <AdminPanel />;
       default:
         return <NotFound />;
     }
@@ -112,8 +148,13 @@ function App() {
   return (
     <div>
       {isUnderMaintenance ? (
-        <MaintainancePage code={code}/>
-      ) : <><Navbar setCurrentPage={setCurrentPage} /> {renderPage()}</>}
+        <MaintainancePage />
+      ) : (
+        <>
+          <Navbar setCurrentPage={setCurrentPage} />
+          {renderPage()}
+        </>
+      )}
     </div>
   );
 }

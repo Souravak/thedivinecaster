@@ -1,15 +1,16 @@
 import React from 'react';
 import './About.css';
-import Instagram from './SocialMedia/Instagram';
-import YouTubeTDC from './SocialMedia/YouTubeTDC';
-import YouTubeDG from './SocialMedia/YouTubeDG';
-import Telegram from './SocialMedia/Telegram';
-import WhatsApp from './SocialMedia/WhatsApp';
-import Threads from './SocialMedia/Threads';
-import X from './SocialMedia/X';
-import LinkedIn from './SocialMedia/LinkedIn';
-import Facebook from './SocialMedia/Facebook';
-import Discord from './SocialMedia/Discord';
+
+import Instagram from './SocialMedia/Instagram/Instagram';
+import YouTubeTDC from './SocialMedia/YouTube/YouTubeTDC';
+import YouTubeDG from './SocialMedia/YouTube/YouTubeDG';
+import Telegram from './SocialMedia/Telegram/Telegram';
+import WhatsApp from './SocialMedia/WhatsApp/WhatsApp';
+import Threads from './SocialMedia/Threads/Threads';
+import X from './SocialMedia/X/X';
+import LinkedIn from './SocialMedia/LinkedIn/LinkedIn';
+import Facebook from './SocialMedia/Facebook/Facebook';
+import Discord from './SocialMedia/Discord/Discord';
 import Footer from '../Footer/Footer';
 
 const About = () => {

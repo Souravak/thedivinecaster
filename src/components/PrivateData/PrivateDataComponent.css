@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto 1rem;
-    /* justify-content: center; */
 }
 .data-item{
     display: flex;
@@ -47,7 +46,6 @@
     position: absolute;
     top: 100px;
     right: 1rem;
-    /* margin-right: rem; */
 }
 .sort-selector{
     font-size: 0.8rem;
@@ -78,6 +76,5 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* justify-content: center; */
     margin: 0 4rem;
 }

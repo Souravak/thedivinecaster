@@ -1,7 +1,8 @@
 import React from 'react'
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture.jpg';
 import './Telegram.css';
+import '../SocialMedia.css';
 
 const Telegram = ({data}) => {
   return (
@@ -48,8 +49,8 @@ const Telegram = ({data}) => {
                 </span>
             </div>
         </div>
-        <div className="join-channel-button">
-            <a href="http://www.t.me/thedivinecastertelegram" target="_blank" rel="noopener noreferrer" className="join-channel-item-button">
+        <div className="join-social-media-button">
+            <a href="http://www.t.me/thedivinecastertelegram" target="_blank" rel="noopener noreferrer" className="join-channel-item-button join-social-media-item-button">
                 <span className="join-channel-button-header">Join Channel</span>
             </a>
         </div>

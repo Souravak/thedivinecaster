@@ -1,5 +1,4 @@
 .home{
-    /* margin-left: 5rem; */
 }
 .mobMenu{
     display: none;
@@ -24,7 +23,6 @@
     list-style: none;
     padding: 0rem;
     display: flex;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
     flex-direction: column;
     gap: 0.2rem;
@@ -32,12 +30,10 @@
 }
 
 .listItem{
-    /* margin: 2rem; */
     padding: 1.5rem;
     border: 0;
     border-radius: 5px;
     width: 25rem;
-    /* height: 1rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,15 +49,11 @@
 }
 
 .home-container{
-    /* align-items: center; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin: auto;
-    /* text-align: center; */
     align-items: center;
-    /* margin: auto; */
-    /* vertical-align: middle; */
 }
 
   
@@ -88,38 +80,4 @@
     }
 }
 
-/* @media screen and (max-width: 1200px){
-    .box{
-        font-size: 1rem;
-    }
-    .listItem{
-        width: 20rem;
-    }
-} */
-
-/* @media screen and (max-width: 980px){ */
-    /* .channelHomeImage img{
-        width: 100vw;
-        height: calc(100vh - 6rem);
-    }
-    .listItem{
-        width: 17rem;
-    }
-}
-
-@media screen and (max-width: 720px){
-    .mobMenu{
-        display: flex;
-    }
-    .desktopMenu{
-        display: none;
-    }
-    .desktopMenuBtn{
-        display: none;
-    }
-    .home-container{
-
-    }
-    
-} */
 

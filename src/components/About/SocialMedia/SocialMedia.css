@@ -1,10 +1,9 @@
-.join-linkedin-button{
+.join-social-media-button{
     text-align: center;
     margin-top: 10px;
 }
-.join-linkedin-item-button{
-    background: #0077b5;
-    padding: 1px 30px;
+.join-social-media-item-button{
+    padding: 5px 30px;
     border-radius: 20px;
     text-decoration: none;
     color: white;

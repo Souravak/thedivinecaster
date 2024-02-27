@@ -20,8 +20,8 @@ function Timer(props) {
   }, [props.initialTimer]);
 
   return (
-    <div className="timer-container"> {/* Add container for consistent width */}
-      <span className="timer">{timer.toString().padStart(2, '0')}</span> {/* Ensure consistent width with leading zero */}
+    <div className="timer-container">
+      <span className="timer">{timer.toString().padStart(2, '0')}</span> 
       <span className="seconds-left">seconds left</span>
     </div>
   );

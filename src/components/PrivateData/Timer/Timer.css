@@ -1,8 +1,6 @@
-/* Timer.css */
 .timer-container {
-    display: flex; /* Ensure consistent width */
+    display: flex;
     font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
-    /* font-size: 1rem; */
     align-items: baseline;
   }
   
@@ -13,6 +11,6 @@
   .seconds-left {
     font-size: 0.7rem;
     color: bisque;
-    white-space: nowrap; /* Prevent line break */
+    white-space: nowrap;
   }
   

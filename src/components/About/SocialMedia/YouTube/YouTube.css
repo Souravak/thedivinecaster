@@ -56,18 +56,6 @@ a{
     color: rgba(144, 144, 144, 0.842);
 }
 
-.subscribe-youtube-button{
-    text-align: center;
-    margin-top: 10px;
-}
-
 .subscribe-youtube-item-button{
     background: #f70000;
-    padding: 1px 30px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 600;
 }

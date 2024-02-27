@@ -1,7 +1,8 @@
 import React from 'react';
 import './LinkedIn.css';
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture.jpg';
+import '../SocialMedia.css';
 
 const LinkedIn = ({data}) => {
   return (
@@ -30,8 +31,8 @@ const LinkedIn = ({data}) => {
             </div>
             
         </div>
-        <div className="join-linkedin-button">
-            <a href="https://linkedin.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="join-linkedin-item-button">
+        <div className="join-social-media-button">
+            <a href="https://linkedin.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="join-linkedin-item-button join-social-media-item-button">
                 <span className="join-linkedin-button-header">Connect Now</span>
             </a>
         </div>

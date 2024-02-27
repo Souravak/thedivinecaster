@@ -18,16 +18,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 5rem;
-    /* flex: 1; */
-    /* justify-content: left; */
-    /* gap: 5px; */
     justify-content: center;
-    /* margin: 2rem; */
-    /* justify-content: flex-end; */
-    /* align-items: center; */
-    /* justify-content:flex-start; */
-    /* justify-self: baseline; */
-    /* align-items: center; */
 }
 .image-card{
     
@@ -40,7 +31,6 @@
 }
 
 .image-card:hover img{
-    /* transform: scale(1.05); */
 }
 .image-card:hover{
     
@@ -64,7 +54,6 @@
 }
 
 .details{
-    /* text-align: left; */
     margin: -1rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
@@ -81,7 +70,6 @@
 }
 .oldPrice{
     text-decoration: line-through;
-    /* color: rgb(255, 255, 255); */
     font-size: 0.8rem;
 }
 

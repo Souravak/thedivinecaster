@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .admin-panel-title{
@@ -16,7 +17,6 @@
 .admin-data-panel, .admin-controller-panel{
     display: flex;
     flex-direction: column;
-    /* gap: 1rem; */
     border: 2px solid #363333;
     border-radius: 5px;
     width: 60rem;
@@ -26,16 +26,13 @@
 .social-media-row, .admin-controller-row {
     display: flex;
     align-items: center;
-    /* gap: 1rem; */
     border: 2px solid #363333;
     
 }
 
 .social-media-name, .admin-controller-name{
-    /* vertical-align: middle; */
     width: 10rem;
     padding: 2rem;
-    /* border: 2px solid #363333; */
 }
 
 .social-media-fields, .admin-controller-fields{
@@ -71,4 +68,21 @@
     border: none;
     border-radius: 2px;
     cursor: pointer;
+}
+
+.admin-panel-update-reset-all-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.admin-panel-update-reset-all-buttons button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
 }

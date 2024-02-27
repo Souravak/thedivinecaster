@@ -1,4 +1,3 @@
-// ImageGalleryComponent.js
 import React from 'react';
 import './ProductGalleryComponent.css';
 import productDetails from '../ProductDetails/ProductDetails';

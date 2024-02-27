@@ -6,8 +6,6 @@ import folderImageRed from '../../assets/Gallery/folder-image-red.png';
 import folderImageGreen from '../../assets/Gallery/folder-image-green.png';
 import folderImageYellow from '../../assets/Gallery/folder-image-yellow.png';
 import folderImagePurple from '../../assets/Gallery/folder-image-purple.png';
-// import folderImageskyblue from '../../assets/Gallery/folder-image-skyblue.png';
-// import folderImageBlue from '../../assets/Gallery/folder-image-blue.png';
 
 const PrivateDataComponent = () => {
   const [sortedData, setSortedData] = useState(data);

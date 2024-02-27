@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import './Navbar.css';
-// import AdminPanelLogin from '../AdminPanelLogin/AdminPanelLogin';
 import logo from '../../assets/logo.png';
 import contactImg from '../../assets/contact.png';
-// import {Link} from 'react-scroll';
 import menu from '../../assets/menu.png';
 
 const Navbar = ({ setCurrentPage }) => {

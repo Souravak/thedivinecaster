@@ -1,7 +1,8 @@
 import React from 'react';
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture.jpg';
 import './Instagram.css';
+import '../SocialMedia.css';
 
 const Instagram = ({data}) => {
   return (
@@ -51,8 +52,8 @@ const Instagram = ({data}) => {
           </div>
         </div>
       </div>
-      <div className="follow-instagram-button">
-        <a href="https://instagram.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="follow-instagram-item-button">
+      <div className="join-social-media-button">
+        <a href="https://instagram.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="follow-instagram-item-button join-social-media-item-button">
             <span className="follow-instagram-button-header">Follow Now</span>
         </a>
       </div>

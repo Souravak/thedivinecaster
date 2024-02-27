@@ -1,14 +1,10 @@
 .private-data-title{
     
     text-align: center;
-    /* margin: 1rem; */
 }
 .private-data-title-countdown{
     font-size: 1.5rem;
-    /* font-size: 1.5rem; */
     text-align: center;
-    /* margin: 1rem; */
-    /* color: red; */
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -16,18 +12,10 @@
 #private-data{
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
-    /* align-items: center; */
-    /* margin: auto; */
-    /* justify-content: center; */
 
 }
 
 .private-data-content{
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* margin: auto 1rem; */
-    /* justify-content: center; */
     margin: 2em;
     align-items:justify;
 }

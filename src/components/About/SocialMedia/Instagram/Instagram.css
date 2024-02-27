@@ -97,17 +97,7 @@
     color: white;
 }
 
-.follow-instagram-button{
-    text-align: center;
-    margin-top: 10px;
-}
+
 .follow-instagram-item-button{
     background: royalblue;
-    padding: 1px 30px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 600;
 }

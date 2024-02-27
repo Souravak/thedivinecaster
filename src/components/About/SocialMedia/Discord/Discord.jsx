@@ -1,7 +1,8 @@
 import React from 'react';
-import Verified from './Verified/Verified';
-import ProfilePicture from '../../../assets/images/profile-picture.jpg';
+import Verified from '../Verified/Verified';
+import ProfilePicture from '../../../../assets/images/profile-picture.jpg';
 import './Discord.css';
+import '../SocialMedia.css';
 
 const Discord = ({data}) => {
     return (
@@ -30,8 +31,8 @@ const Discord = ({data}) => {
                 </div>
                 
             </div>
-            <div className="join-discord-button">
-                <a href="https://dicord.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="join-discord-item-button">
+            <div className="join-social-media-button">
+                <a href="https://dicord.com/thedivinecaster" target="_blank" rel="noopener noreferrer" className="join-discord-item-button join-social-media-item-button">
                     <span className="join-discord-button-header">Join Now</span>
                 </a>
             </div>

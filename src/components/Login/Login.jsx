@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
-import { initializeApp } from 'firebase/app'; // Import initializeApp directly
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'; // Import Firebase authentication module
-
+import { initializeApp } from 'firebase/app';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import firebaseConfig from '../../FirebaseConfig/FirebaseConfig';
 import './Login.css';
-const firebaseConfig = {
-    apiKey: "AIzaSyCvafXWcjByZCRfX9G4hfU1RZ0vU84sKFM",
-    authDomain: "thedivinecaster-877cc.firebaseapp.com",
-    projectId: "thedivinecaster-877cc",
-    storageBucket: "thedivinecaster-877cc.appspot.com",
-    messagingSenderId: "293556884205",
-    appId: "1:293556884205:web:927adc85f21909063572e4",
-    measurementId: "G-194H2WERR6"
-};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -27,17 +18,16 @@ const Login = ({ onLoginSuccess }) => {
             const email = username + '@gmail.com';
             const response = await signInWithEmailAndPassword(auth, email, password);
             if (response.user) {
-                // User is authenticated, you can perform additional actions here if needed
                 const controllerData = JSON.parse(sessionStorage.getItem('controllerData'))
                 var time = +controllerData.duration; // in minutes
-                time = time*60; // convert to milliseconds
+                time = time*60; // in seconds
                 alert('Auto Logout in '+time+' seconds');
                 onLoginSuccess();
             }
         } catch (error) {
             alert('You are not authorized to view data');
             window.location.reload();
-            console.error('Authentication Error:', error);
+            // console.error('Authentication Error:', error);
         }
     };
 
