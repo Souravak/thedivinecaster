@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.666a524d.css",
-    "main.js": "/thedivinecaster/static/js/main.ae1414b7.js",
+    "main.css": "/thedivinecaster/static/css/main.fc1c16a5.css",
+    "main.js": "/thedivinecaster/static/js/main.047909ec.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/zebronics-zebax-ninja.jpg": "/thedivinecaster/static/media/zebronics-zebax-ninja.38f40379c19d4d535684.jpg",
     "static/media/asus-tuf-h1-headset.jpg": "/thedivinecaster/static/media/asus-tuf-h1-headset.a1227ce853cf87600b1c.jpg",
@@ -51,18 +51,21 @@
     "static/media/redgear-canyon-gaming-keyboard.jpg": "/thedivinecaster/static/media/redgear-canyon-gaming-keyboard.76e417b2d573b7b1e0bd.jpg",
     "static/media/sandisk-ultra-usb.jpg": "/thedivinecaster/static/media/sandisk-ultra-usb.45ff623cb30fd1567702.jpg",
     "static/media/contact.png": "/thedivinecaster/static/media/contact.b317b6debe0cf1a03044.png",
+    "static/media/jiofi.jpg": "/thedivinecaster/static/media/jiofi.f230890ddc5150043ee6.jpg",
     "static/media/folder-image-yellow.png": "/thedivinecaster/static/media/folder-image-yellow.7d9a04d795d0e3d31b57.png",
+    "static/media/dji-gimbal-om-4-se.jpg": "/thedivinecaster/static/media/dji-gimbal-om-4-se.fdd60670628b6a3b8604.jpg",
     "static/media/profile-picture.jpg": "/thedivinecaster/static/media/profile-picture.3d9b7650193305c2251b.jpg",
+    "static/media/airtel-mywifi.jpg": "/thedivinecaster/static/media/airtel-mywifi.04db98617f34e563c24f.jpg",
     "static/media/profile-picture-dg.jpg": "/thedivinecaster/static/media/profile-picture-dg.e931a5ef9ffafc106437.jpg",
     "static/media/d-link-wifi-adapter.jpg": "/thedivinecaster/static/media/d-link-wifi-adapter.8a1bc44e8ff8288caadd.jpg",
     "static/media/vivo-v15-pro.jpg": "/thedivinecaster/static/media/vivo-v15-pro.6e1b8359c38ef10c627d.jpg",
     "static/media/instagram.png": "/thedivinecaster/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "index.html": "/thedivinecaster/index.html",
-    "main.666a524d.css.map": "/thedivinecaster/static/css/main.666a524d.css.map",
-    "main.ae1414b7.js.map": "/thedivinecaster/static/js/main.ae1414b7.js.map"
+    "main.fc1c16a5.css.map": "/thedivinecaster/static/css/main.fc1c16a5.css.map",
+    "main.047909ec.js.map": "/thedivinecaster/static/js/main.047909ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.666a524d.css",
-    "static/js/main.ae1414b7.js"
+    "static/css/main.fc1c16a5.css",
+    "static/js/main.047909ec.js"
   ]
 }
