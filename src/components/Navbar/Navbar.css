@@ -112,9 +112,9 @@
         display: flex;
     }
     .desktopMenu{
-        display: none;
+        display: flex;
     }
     .desktopMenuBtn{
-        display: none;
+        display: flex;
     }
 }
