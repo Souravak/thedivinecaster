@@ -77,7 +77,7 @@
 }
 
 .mobMenu{
-    display: none;
+    display: flex;
     object-fit: cover;
     height: 1.8rem;
 }
