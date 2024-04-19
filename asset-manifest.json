@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/thedivinecaster/static/css/main.e96acea7.css",
-    "main.js": "/thedivinecaster/static/js/main.e1b5436e.js",
+    "main.css": "/thedivinecaster/static/css/main.9ff411bc.css",
+    "main.js": "/thedivinecaster/static/js/main.939dc295.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/qr10000.jpg": "/thedivinecaster/static/media/qr10000.ca7af7a3105887b90c95.jpg",
     "static/media/qr5000.jpg": "/thedivinecaster/static/media/qr5000.da6c042eeb145d1dbd3c.jpg",
@@ -23,11 +23,11 @@
     "static/media/profile-picture-dg.jpg": "/thedivinecaster/static/media/profile-picture-dg.e931a5ef9ffafc106437.jpg",
     "static/media/instagram.png": "/thedivinecaster/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "index.html": "/thedivinecaster/index.html",
-    "main.e96acea7.css.map": "/thedivinecaster/static/css/main.e96acea7.css.map",
-    "main.e1b5436e.js.map": "/thedivinecaster/static/js/main.e1b5436e.js.map"
+    "main.9ff411bc.css.map": "/thedivinecaster/static/css/main.9ff411bc.css.map",
+    "main.939dc295.js.map": "/thedivinecaster/static/js/main.939dc295.js.map"
   },
   "entrypoints": [
-    "static/css/main.e96acea7.css",
-    "static/js/main.e1b5436e.js"
+    "static/css/main.9ff411bc.css",
+    "static/js/main.939dc295.js"
   ]
 }
