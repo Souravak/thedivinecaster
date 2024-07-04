@@ -144,6 +144,20 @@ const Data = [
         title: 'Mom Docs',
         link: 'https://drive.google.com/drive/u/0/folders/1QMWhWiC6bHcbgcNiYcTlHSYLkjbjH-7M',
         priority: 'low'
+    },
+
+    {
+        id: 23,
+        title: 'Private Word',
+        link: 'https://1drv.ms/w/s!AtlqfBk9fQV3oDOHaVhRZ81qo3x3?e=OFYiJP',
+        priority: 'high'
+    },
+
+    {
+        id: 24,
+        title: 'Youtube Scripts',
+        link: 'https://1drv.ms/w/s!AtlqfBk9fQV3oDVRfJs8xyRWoWf2',
+        priority: 'high'
     }
     
 ];

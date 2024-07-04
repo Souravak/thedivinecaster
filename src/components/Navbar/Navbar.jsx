@@ -25,12 +25,12 @@ const Navbar = ({ setCurrentPage }) => {
           <button onClick={() => handleNavClick('login')} className={`desktopMenuListItem item ${activeNav === 'login' ? 'active' : ''}`}>Data</button>
           <button onClick={() => handleNavClick('admin-panel-login')} className={`desktopMenuListItem item ${activeNav === 'admin-panel-login' ? 'active' : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
         </div>
-        <button style={{borderRadius: "5rem", outline: "0",border: "0",padding: "5px 1rem"}} onClick={() => handleNavClick('contact')} className={`${activeNav === 'contact' ? '' : ''}`} >
-          <img src={contactImg} alt="" className="desktopMenuImg" />&nbsp;Contact Me
+        <button onClick={() => handleNavClick('contact')} className={`${activeNav === 'contact' ? '' : '' } contact-me-button desktopMenu`} >
+          <span><img src={contactImg} alt="" className="desktopMenuImg" />&nbsp;Contact Me</span>
         </button>
-        <img src={menu} alt="Menu" className='mobMenu'onClick={() => setShowMenu(!showMenu)} />
+        <img src={menu} alt="Menu" className='mobMenu' onClick={() => setShowMenu(!showMenu)} />
         <div className="navMenu" style={{display: showMenu? 'flex':'none'}}>
-        <button onClick={() => handleNavClick('home')} className={`listItem ${activeNav === 'home' ? 'active' : ''}`}>Home</button>
+          <button onClick={() => handleNavClick('home')} className={`listItem ${activeNav === 'home' ? 'active' : ''}`}>Home</button>
           <button onClick={() => handleNavClick('about')} className={`listItem ${activeNav === 'about' ? 'active' : ''}`}>About</button>
           <button onClick={() => handleNavClick('trending')} className={`listItem ${activeNav === 'trending' ? 'active' : ''}`}>Trending</button>
           <button onClick={() => handleNavClick('tdcstores')} className={`listItem ${activeNav === 'tdcstores' ? 'active' : ''}`}>TDC Stores</button>
@@ -43,3 +43,52 @@ const Navbar = ({ setCurrentPage }) => {
 }
 
 export default Navbar
+
+// import React, { useState } from 'react';
+// import styles from './Navbar.module.css'; // Import styles from Navbar.module.css
+// import logo from '../../assets/logo.png';
+// import contactImg from '../../assets/contact.png';
+// import menu from '../../assets/menu.png';
+
+// const Navbar = ({ setCurrentPage }) => {
+//   const [activeNav, setActiveNav] = useState('home');
+//   const [showMenu, setShowMenu] = useState(false);
+
+//   const handleNavClick = (page) => {
+//     setCurrentPage(page);
+//     setActiveNav(page);
+//   };
+
+//   return (
+//     <nav className={styles.navbar}>
+//       <a href="./"><img src={logo} alt="logo" className={styles.logo}/></a>
+//       <div className={styles.desktopMenu}>
+//         <button onClick={() => handleNavClick('home')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'home' ? styles.active : ''}`}>Home</button>
+//         <button onClick={() => handleNavClick('about')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'about' ? styles.active : ''}`}>About</button>
+//         <button onClick={() => handleNavClick('trending')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'trending' ? styles.active : ''}`}>Trending</button>
+//         <button onClick={() => handleNavClick('tdcstores')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'tdcstores' ? styles.active : ''}`}>TDC Stores</button>
+//         <button onClick={() => handleNavClick('donate')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'donate' ? styles.active : ''}`}>Donate</button>
+//         <button onClick={() => handleNavClick('login')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'login' ? styles.active : ''}`}>Data</button>
+//         <button onClick={() => handleNavClick('admin-panel-login')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'admin-panel-login' ? styles.active : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
+//       </div>
+//       <button onClick={() => handleNavClick('contact')} className={`${styles.contactMeButton} ${styles.contactMeButtonDesk}`} >
+//         <span><img src={contactImg} alt="" className={styles.desktopMenuImg} />&nbsp;Contact Me</span>
+//       </button>
+//       <img src={menu} alt="Menu" className={styles.mobMenu} onClick={() => setShowMenu(!showMenu)} />
+//       <div className={styles.navMenu} style={{display: showMenu? 'flex':'none'}}>
+//         <button onClick={() => handleNavClick('home')} className={`${styles.listItem} ${activeNav === 'home' ? styles.active : ''}`}>Home</button>
+//         <button onClick={() => handleNavClick('about')} className={`${styles.listItem} ${activeNav === 'about' ? styles.active : ''}`}>About</button>
+//         <button onClick={() => handleNavClick('trending')} className={`${styles.listItem} ${activeNav === 'trending' ? styles.active : ''}`}>Trending</button>
+//         <button onClick={() => handleNavClick('tdcstores')} className={`${styles.listItem} ${activeNav === 'tdcstores' ? styles.active : ''}`}>TDC Stores</button>
+//         <button onClick={() => handleNavClick('donate')} className={`${styles.listItem} ${activeNav === 'donate' ? styles.active : ''}`}>Donate</button>
+//         <button onClick={() => handleNavClick('login')} className={`${styles.listItem} ${activeNav === 'login' ? styles.active : ''}`}>Data</button>
+//         <button onClick={() => handleNavClick('admin-panel-login')} className={`${styles.listItem} ${activeNav === 'admin-panel-login' ? styles.active : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
+//         <button onClick={() => handleNavClick('contact')} className={`${styles.contactMeButton} ${styles.listItem} ${styles.contactMeButtonMob}`} >
+//           <span><img src={contactImg} alt="" className={styles.desktopMenuImg} />&nbsp;Contact Me</span>
+//         </button>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;

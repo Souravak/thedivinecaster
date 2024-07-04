@@ -38,7 +38,7 @@ const AdminPanelLogin = ({ onAdminLoginSuccess }) => {
     return (
         <>
             <section id="loginPage">
-                <h1 className="loginPageTitle">Admin Login</h1>
+                <h1 className="loginPageTitle">Admin Controller Login</h1>
                 <div className="login-form">
                     <div className="login-description">
                         Please enter Admin Name and Password

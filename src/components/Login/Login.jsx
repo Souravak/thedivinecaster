@@ -39,7 +39,7 @@ const Login = ({ onLoginSuccess }) => {
     return (
         <>
             <section id="loginPage">
-                <h1 className="loginPageTitle">Login</h1>
+                <h1 className="loginPageTitle">Private Data Login</h1>
                 <div className="login-form">
                     <div className="login-description">
                         Please enter username and password

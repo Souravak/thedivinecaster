@@ -3,7 +3,7 @@ const ProductDetails = [
         name: 'Asus ROG Strix G15',
         oldPrice: '1,97,990',
         newPrice: '1,21,990',
-        myLink: 'https://www.flipkart.com/asus-rog-strix-g15-advantage-90whr-battery-amd-ryzen-9-octa-core-5980hx-16-gb-1-tb-ssd-windows-11-home-12-gb-graphics-amd-radeon-rx-6800m-165-hz-g513qy-hq032ws-gaming-laptop/p/itmdf965a0b86efa?pid=COMGE73KXAHEFJUP&lid=LSTCOMGE73KXAHEFJUPK1PC9A&marketplace=FLIPKART', 
+        myLink: 'https://www.flipkart.com/asus-rog-strix-g15-advantage-90whr-battery-amd-ryzen-9-octa-core-5980hx-16-gb-1-tb-ssd-windows-11-home-12-gb-graphics-amd-radeon-rx-6800m-165-hz-g513qy-hq032ws-gaming-laptop/p/itmdf965a0b86efa', 
         img: require('../../../assets/Gallery/rog-strix-g15.jpg')
     },
 
@@ -11,7 +11,7 @@ const ProductDetails = [
         name: 'Vivo V15 Pro', 
         oldPrice: '36,990', 
         newPrice: '34,990', 
-        myLink: 'https://www.flipkart.com/vivo-v15-pro-topaz-blue-128-gb/p/itmffmh3damhbuga?pid=MOBFG8X7ZQHYHX28&lid=LSTMOBFG8X7ZQHYHX28FHKERJ&marketplace=FLIPKART', 
+        myLink: 'https://www.flipkart.com/vivo-v15-pro-topaz-blue-128-gb/p/itmffmh3damhbuga', 
         img: require('../../../assets/Gallery/vivo-v15-pro.jpg')
     },
 
@@ -64,7 +64,15 @@ const ProductDetails = [
     },
 
     {
-        name: 'realme narzo N55',
+        name: 'DJI OM 4 SE Mobile Intelligent Gimbal', 
+        oldPrice: '12,999', 
+        newPrice: '8,990', 
+        myLink: 'https://amzn.in/d/3XUzEaG', 
+        img: require('../../../assets/Gallery/dji-gimbal-om-4-se.jpg')
+    },
+
+    {
+        name: 'Realme Narzo N55',
         oldPrice: '14,999',
         newPrice: '9,499',
         myLink: 'https://amzn.eu/d/bxxWGNi',
@@ -85,6 +93,22 @@ const ProductDetails = [
         newPrice: '799',
         myLink: 'https://amzn.eu/d/gDcTILH',
         img: require('../../../assets/Gallery/logitech-m221.jpg')
+    },
+    
+    {
+        name: 'Airtel Hotspot WiFi Data Card Dongle',
+        oldPrice: '4,999',
+        newPrice: '2,499',
+        myLink: 'https://amzn.in/d/7yFjO1j',
+        img: require('../../../assets/Gallery/airtel-mywifi.jpg')
+    },
+
+    {
+        name: 'JioFi 6 Wireless Data Card',
+        oldPrice: '4,499',
+        newPrice: '2,990',
+        myLink: 'https://amzn.in/d/2DFksWs',
+        img: require('../../../assets/Gallery/jiofi.jpg')
     },
 
     {

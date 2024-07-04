@@ -67,3 +67,7 @@
     width: 3rem;
     margin: 0 0.75rem;
 }
+
+@media screen and (max-width: 720px){
+    
+}

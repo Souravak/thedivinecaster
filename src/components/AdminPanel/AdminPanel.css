@@ -6,11 +6,11 @@
 }
 
 .admin-panel-title{
-
+/*  */
 }
 
 .panel-name{
-
+/*  */
 }
 
 /*  */
@@ -47,8 +47,8 @@
 .field-name, .controller-name{
     font-size: 0.8rem;
 }
-.field-value, .controller-value{
-    width: 5rem;
+.field-value, .controller-value {
+    width: 8rem;
 }
 
 .social-media-update-reset-button,
@@ -85,4 +85,56 @@
     color: white;
     margin-right: 10px;
     transition: background-color 0.3s ease;
+}
+
+
+/* ------------------------------- */
+
+.add-product-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.add-product-and-image{
+    display: flex;
+    align-items: center;
+}
+
+.image-preview{
+  border: 0.2rem solid #ffffff;
+}
+.add-product-details{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+   
+}
+.add-product-details input{
+    display: flex;
+    gap: 1rem;
+}
+
+.trending-controller {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.trending-controller h6 {
+    width: 10rem;
+    margin: 0; /* Reset margin for better alignment */
+    display: flex; /* Align text vertically */
+    align-items: center; /* Align text vertically */
+}
+
+.trending-controller-item {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.trending-controller-item input {
+    transform: scale(1.5); /* Adjust the scale factor as needed */
+    margin-right: 8px;
 }

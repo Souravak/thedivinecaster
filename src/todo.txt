@@ -1,0 +1,1 @@
+a check box in admin page.include the options to control which all channel's video has to be featured..
