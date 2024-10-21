@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/thedivinecaster/static/css/main.042472f2.css",
-    "main.js": "/thedivinecaster/static/js/main.84eb3556.js",
+    "main.js": "/thedivinecaster/static/js/main.6458479c.js",
     "static/media/channelHomeImg.png": "/thedivinecaster/static/media/channelHomeImg.b1382a4334c65c02275e.png",
     "static/media/qr10000.jpg": "/thedivinecaster/static/media/qr10000.ca7af7a3105887b90c95.jpg",
     "static/media/qr5000.jpg": "/thedivinecaster/static/media/qr5000.da6c042eeb145d1dbd3c.jpg",
@@ -24,10 +24,10 @@
     "static/media/instagram.png": "/thedivinecaster/static/media/instagram.0bcd1dcb7d853c327af7.png",
     "index.html": "/thedivinecaster/index.html",
     "main.042472f2.css.map": "/thedivinecaster/static/css/main.042472f2.css.map",
-    "main.84eb3556.js.map": "/thedivinecaster/static/js/main.84eb3556.js.map"
+    "main.6458479c.js.map": "/thedivinecaster/static/js/main.6458479c.js.map"
   },
   "entrypoints": [
     "static/css/main.042472f2.css",
-    "static/js/main.84eb3556.js"
+    "static/js/main.6458479c.js"
   ]
 }
