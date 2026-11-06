@@ -1,120 +1,183 @@
-.navbar{
-    background: rgb(30, 30, 30);
-    height: 5rem;
-    padding: 0rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 3;
-
+/* Main site header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(11, 14, 19, .96);
+  border-bottom: 1px solid rgba(255, 255, 255, .09);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
-
-.item{
-    color: white;
-    cursor: pointer;
+.site-navbar {
+  width: min(1320px, calc(100% - 96px));
+  min-height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 48px);
 }
-
-.logo{
-    object-fit: cover;
-    height: 3rem;
-    width: 10rem;
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 17px;
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #d4dce3;
+  text-align: left;
+  cursor: pointer;
 }
-
-.desktopMenuListItem.active {
-    color: yellow;
-} 
-
-.desktopMenu button{
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1rem;
-    margin: 0 1rem;
-
+.site-logo {
+  display: block;
+  width: clamp(148px, 17vw, 235px);
+  max-height: 64px;
+  height: auto;
+  object-fit: contain;
 }
-
-.desktopMenuListItem{
-    margin: 1rem;
-    cursor: pointer;
-    color: white;
+.brand-divider {
+  display: block;
+  flex: 0 0 1px;
+  height: 29px;
+  background: rgba(255, 255, 255, .19);
 }
-
-.desktopMenuListItem:hover{
-    color: yellow;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid yellow;
+.brand-label {
+  font-size: .65rem;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: .11em;
+  white-space: nowrap;
+  color: #9ca7b4;
 }
-.desktopMenuListItem:active{
-    color: yellow;
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-left: auto;
 }
-
-.desktopMenuBtn{
-    background: white;
-    color: black;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 1rem;
-    border-radius: 2rem;
+.site-nav-link {
+  position: relative;
+  border: 0;
+  padding: 12px 0;
+  background: transparent;
+  color: #a9b2bd;
+  font: inherit;
+  font-size: .86rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color .2s ease;
 }
-
-.desktopMenuImg{
-    width: 18px;
-    height: auto;
+.site-nav-link:hover,
+.site-nav-link.is-active { color: #83cdb5; }
+.site-nav-link.is-active::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  height: 2px;
+  border-radius: 2px;
+  background: #83cdb5;
 }
-.desktopMenu{
-    object-fit: cover;
-    height: 1rem;
-    margin: 1rem;
+.site-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  min-height: 41px;
+  padding: 0 17px;
+  border: 1px solid rgba(131, 205, 181, .45);
+  border-radius: 4px;
+  color: #a5dfcc;
+  background: rgba(131, 205, 181, .07);
+  font-size: .78rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s ease, border-color .2s ease;
 }
-
-.active{
-    color: yellow;
+.site-contact-button:hover {
+  color: #e4fff5;
+  border-color: #83cdb5;
+  background: rgba(131, 205, 181, .17);
 }
-
-.mobMenu{
-    display: flex;
-    object-fit: cover;
-    height: 1.8rem;
+.site-menu-toggle,
+.site-mobile-menu { display: none; }
+.site-menu-toggle {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
 }
-
-.navMenu{
+.site-menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #e4e9ee;
+  transition: transform .2s ease;
+}
+.site-menu-toggle.is-open span:first-child { transform: translateY(4px) rotate(45deg); }
+.site-menu-toggle.is-open span:last-child { transform: translateY(-4px) rotate(-45deg); }
+.site-nav-link:focus-visible,
+.site-brand:focus-visible,
+.site-menu-toggle:focus-visible,
+.site-contact-button:focus-visible,
+.site-mobile-menu a:focus-visible {
+  outline: 2px solid #83cdb5;
+  outline-offset: 4px;
+}
+@media (max-width: 1060px) {
+  .site-navbar { width: calc(100% - 56px); gap: 20px; }
+  .brand-label, .brand-divider { display: none; }
+}
+@media (max-width: 720px) {
+  .site-navbar { width: calc(100% - 36px); min-height: 70px; }
+  .site-logo { width: clamp(150px, 42vw, 200px); max-height: 54px; }
+  .site-nav-links, .site-contact-button { display: none; }
+  .site-menu-toggle { display: flex; margin-left: auto; }
+  .site-mobile-menu {
+    display: none;
     position: absolute;
-    top: 4rem;
-    right: 2rem;
-    z-index: 2;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 16px 18px 22px;
+    background: #10151b;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 20px 35px rgba(0,0,0,.32);
+  }
+  .site-mobile-menu.is-visible { display: flex; flex-direction: column; gap: 8px; }
+  .site-mobile-menu .site-nav-link {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    text-align: left;
+    border-radius: 4px;
+  }
+  .site-mobile-menu .site-nav-link.is-active {
+    background: rgba(131,205,181,.1);
+  }
+  .site-mobile-menu .site-nav-link.is-active::after { display: none; }
+  .mobile-youtube-link {
     display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-    height: fit-content;
-    min-width: 15rem;
-    background: rgb(40,40,40);
-    border-radius: 1rem;
-}
-
-.listItem{
-    color: white;
-    padding: 0.5rem 3rem;
-    margin: 0.25rem;
-    background: rgb(30, 30, 30);
-}
-
-.contact-btn{
-    border-radius: 5rem;
-}
-
-@media screen and (max-width: 720px){
-    .mobMenu{
-        display: flex;
-    }
-    .desktopMenu{
-        display: flex;
-    }
-    .desktopMenuBtn{
-        display: flex;
-    }
+    align-items: center;
+    gap: 10px;
+    padding: 13px 12px;
+    color: #a5dfcc;
+    font-size: .86rem;
+    text-decoration: none;
+  }
 }
