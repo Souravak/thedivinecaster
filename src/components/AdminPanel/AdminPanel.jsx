@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import './AdminPanel.css';
 
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import firebaseConfig from '../../FirebaseConfig/FirebaseConfig';
-
-firebase.initializeApp(firebaseConfig);
+import firebase from '../../firebase';
 
 const AdminPanel = () => {
   const [controller, setController] = useState(JSON.parse(sessionStorage.getItem('controllerData')));
@@ -22,14 +18,14 @@ const AdminPanel = () => {
   const [image, setImage] = useState(null);
   const [imageUrl, setImageUrl] = useState('');
   
-  const trendingControllerData = JSON.parse(sessionStorage.getItem('trendingControllerData'));
+  const trendingControllerData = JSON.parse(sessionStorage.getItem('trendingControllerData') || '{}') || {};
 
-  const [tdcCheckBox, setTdcCheckBox] = useState(trendingControllerData.tdc);
-  const [dgCheckBox, setDgCheckBox] = useState(trendingControllerData.dg);
-  const [srvtvCheckBox, setSrvtvCheckBox] = useState(trendingControllerData.srvtv);
-  const [dmhCheckBox, setDmhCheckBox] = useState(trendingControllerData.dmh);
-  const [dpcsCheckBox, setDpcsCheckBox] = useState(trendingControllerData.dpcs);
-  const [dchCheckBox, setDchCheckBox] = useState(trendingControllerData.dch);
+  const [tdcCheckBox, setTdcCheckBox] = useState(Boolean(trendingControllerData.tdc));
+  const [dgCheckBox, setDgCheckBox] = useState(Boolean(trendingControllerData.dg));
+  const [srvtvCheckBox, setSrvtvCheckBox] = useState(Boolean(trendingControllerData.srvtv));
+  const [dmhCheckBox, setDmhCheckBox] = useState(Boolean(trendingControllerData.dmh));
+  const [dpcsCheckBox, setDpcsCheckBox] = useState(Boolean(trendingControllerData.dpcs));
+  const [dchCheckBox, setDchCheckBox] = useState(Boolean(trendingControllerData.dch));
   
 
   

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import firebase from './firebase';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -15,10 +13,9 @@ import MaintainancePage from './components/MaintainancePage/MaintainancePage';
 import AdminPanelLogin from './components/AdminPanelLogin/AdminPanelLogin';
 import AdminPanel from './components/AdminPanel/AdminPanel';
 import NotFound from './components/NotFound/NotFound';
-import firebaseConfig from './FirebaseConfig/FirebaseConfig';
 import './App.css';
 
-firebase.initializeApp(firebaseConfig);
+
 
 
 
@@ -238,81 +235,60 @@ function App() {
   const [isUnderMaintenance, setIsUnderMaintenance] = useState(false);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetchControllerDataFromFirestore()
-      .then(data => {
+    let isMounted = true;
+
+    const loadInitialData = async () => {
+      const results = await Promise.allSettled([
+        fetchControllerDataFromFirestore(),
+        fetchCurrentVersionFromFirestore(),
+        fetchSocialMediaDataFromFirestore(),
+        fetchTrendingControllerDataFromFirestore(),
+        fetchVideoLinkFromFirestore()
+      ]);
+
+      if (!isMounted) return;
+
+      const [controllerResult, , socialResult, trendingResult, videoResult] = results;
+
+      if (controllerResult.status === 'fulfilled') {
+        const data = controllerResult.value;
         sessionStorage.setItem('controllerData', JSON.stringify(data));
-        if ((data && data.run === 'offline') || (data && data.run === '404')) {
-          setIsUnderMaintenance(true);
-        }
-      })
-      .catch(error => {
-        console.error("Error fetching controller data:", error);
-      })
-      .finally(() => {
-        setLoading(false); // Set loading to false regardless of success or failure
-    });
-  
-    fetchCurrentVersionFromFirestore() // Add this line to fetch the version
-        .then(() => {
-            // Optionally handle any logic after fetching version
-        })
-        .catch(error => {
-            console.error("Error fetching version:", error);
-        });
+        setIsUnderMaintenance(Boolean(data && (data.run === 'offline' || data.run === '404')));
+      } else {
+        console.error('Error fetching controller data:', controllerResult.reason);
+      }
 
+      if (socialResult.status === 'fulfilled') {
+        sessionStorage.setItem('socialMediaData', JSON.stringify(socialResult.value || {}));
+      } else {
+        console.error('Error fetching social media data:', socialResult.reason);
+      }
 
-    fetchSocialMediaDataFromFirestore()
-      .then(data => {
-        sessionStorage.setItem('socialMediaData', JSON.stringify(data));
-      })
-      .catch(error => {
-        console.error("Error fetching social media data:", error);
-      })
-      .finally(() => {
-        setLoading(false); // Set loading to false regardless of success or failure
-    });
-  
-    
-    // fetchVideoLinkFromFirestore()
-    //   .then(tdclinks => {
-    //     sessionStorage.setItem('TDCVideoLinks', JSON.stringify(tdclinks));
-    //   })
-    //   .catch(error => {
-    //     console.error("Error fetching video links:", error);
-    //   })
-    //   .finally(() => {
-    //     setLoading(false); // Set loading to false regardless of success or failure
-    // });
+      if (trendingResult.status === 'fulfilled') {
+        sessionStorage.setItem('trendingControllerData', JSON.stringify(trendingResult.value || {}));
+      } else {
+        console.error('Error fetching trending controller data:', trendingResult.reason);
+      }
 
-    fetchTrendingControllerDataFromFirestore()
-      .then(data => {
-        sessionStorage.setItem('trendingControllerData', JSON.stringify(data));
-        // console.log(data);
-      })
-      .catch(error => {
-        console.error("Error fetching trending controller data:", error);
-      })
-      .finally(() => {
-        setLoading(false); // Set loading to false regardless of success or failure
-    });
-    
-    
-    fetchVideoLinkFromFirestore()
-      .then(([tdclinks, dglinks, srvtvlinks, dmhlinks, dpcslinks, dchlinks]) => {
-
+      if (videoResult.status === 'fulfilled') {
+        const [tdclinks = [], dglinks = [], srvtvlinks = [], dmhlinks = [], dpcslinks = [], dchlinks = []] = videoResult.value || [];
         sessionStorage.setItem('TDCVideoLinks', JSON.stringify(tdclinks));
         sessionStorage.setItem('DGVideoLinks', JSON.stringify(dglinks));
         sessionStorage.setItem('SRVTVVideoLinks', JSON.stringify(srvtvlinks));
         sessionStorage.setItem('DMHVideoLinks', JSON.stringify(dmhlinks));
         sessionStorage.setItem('DPCSVideoLinks', JSON.stringify(dpcslinks));
         sessionStorage.setItem('DCHVideoLinks', JSON.stringify(dchlinks));
+      } else {
+        console.error('Error fetching video links:', videoResult.reason);
+      }
 
-        setLoading(false); // Set loading to false after all fetch calls are complete
-      })
-      .catch(error => {
-        console.error("Error fetching data:", error);
-        setLoading(false); // Set loading to false in case of errors
-      });
+      setLoading(false);
+    };
+
+    loadInitialData();
+    return () => {
+      isMounted = false;
+    };
   }, []);
   
   
@@ -335,25 +311,11 @@ function App() {
             <p>Rendering....</p>
           </div>
         ) : (
-          <RenderAfterLoading />
+          getPageComponent()
         );
       default:
         return <NotFound />;
     }
-  };
-
-  const RenderAfterLoading = () => {
-    const [showPage, setShowPage] = useState(false);
-
-    useEffect(() => {
-      const timeout = setTimeout(() => {
-        setShowPage(true);
-      }, 10); // 1 second delay
-
-      return () => clearTimeout(timeout);
-    }, []);
-
-    return showPage ? getPageComponent() : null;
   };
 
   const getPageComponent = () => {

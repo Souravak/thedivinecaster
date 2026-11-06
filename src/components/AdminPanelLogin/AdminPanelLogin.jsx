@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
 
-import { initializeApp } from 'firebase/app'; 
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'; 
-import firebaseConfig from '../../FirebaseConfig/FirebaseConfig';
+import firebase from '../../firebase';
 import './AdminPanelLogin.css';
 
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app); 
+const auth = firebase.auth(); 
 
 const AdminPanelLogin = ({ onAdminLoginSuccess }) => {
     const [username, setUsername] = useState('');
@@ -18,7 +15,7 @@ const AdminPanelLogin = ({ onAdminLoginSuccess }) => {
         try {
             const email = username + '@thedivinecaster.com';
             if(username === 'admin'){
-                const response = await signInWithEmailAndPassword(auth, email, password);
+                const response = await auth.signInWithEmailAndPassword(email, password);
                 if (response.user) {
                     onAdminLoginSuccess();
                 }

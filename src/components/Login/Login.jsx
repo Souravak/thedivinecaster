@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import Footer from '../Footer/Footer';
-import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import firebaseConfig from '../../FirebaseConfig/FirebaseConfig';
+import firebase from '../../firebase';
 import './Login.css';
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app); // Get authentication instance
+const auth = firebase.auth();
 
 const Login = ({ onLoginSuccess }) => {
     const [username, setUsername] = useState('');
@@ -16,11 +12,10 @@ const Login = ({ onLoginSuccess }) => {
     const handleLogin = async () => {
         try {
             const email = username + '@gmail.com';
-            const response = await signInWithEmailAndPassword(auth, email, password);
+            const response = await auth.signInWithEmailAndPassword(email, password);
             if (response.user) {
-                const controllerData = JSON.parse(sessionStorage.getItem('controllerData'))
-                var time = +controllerData.duration; // in minutes
-                time = time*60; // in seconds
+                const controllerData = JSON.parse(sessionStorage.getItem('controllerData') || 'null');
+                const time = controllerData && Number.isFinite(Number(controllerData.duration)) ? Number(controllerData.duration) * 60 : 0; // seconds
                 alert('Auto Logout in '+time+' seconds');
                 onLoginSuccess();
             }
