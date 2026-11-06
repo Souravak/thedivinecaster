@@ -11,6 +11,7 @@ const ProductGalleryComponent2 = () => {
     const query = search.trim().toLowerCase();
     const price = value => Number(String(value || '').replace(/[^0-9.]/g, '')) || 0;
     const filtered = products.filter(product =>
+      Boolean(product.img && product.myLink) &&
       String(product.name || '').toLowerCase().includes(query)
     );
     return [...filtered].sort((a, b) => {
@@ -39,20 +40,14 @@ const ProductGalleryComponent2 = () => {
       <div className="image-container">
         {visibleProducts.map(product => (
           <article key={product.id} className="image-card">
-            {product.img ? (
-              <img src={product.img} alt={product.name || 'Product'} className="galleryItem" loading="lazy" />
-            ) : (
-              <div className="store-image-placeholder">Image unavailable</div>
-            )}
+            <img src={product.img} alt={product.name || 'Product'} className="galleryItem" loading="lazy" />
             <div className="details">
               <span className="productName">{product.name}</span>
               <div className="priceDetails">
                 <span className="newPrice">₹{product.newPrice}</span>
                 <span className="old-price-mrp">MRP: <span className="oldPrice">₹{product.oldPrice}</span></span>
               </div>
-              {product.myLink ? (
-                <a href={product.myLink} target="_blank" rel="noopener noreferrer" className="view-button">View product</a>
-              ) : <span className="store-unavailable">Link unavailable</span>}
+              <a href={product.myLink} target="_blank" rel="noopener noreferrer" className="view-button">View product</a>
             </div>
           </article>
         ))}
