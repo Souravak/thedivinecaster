@@ -131,3 +131,10 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+.home-contact-banner { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 65px; padding: 35px 40px; border: 1px solid rgba(131,205,181,.23); border-radius: 6px; background: linear-gradient(120deg,rgba(131,205,181,.10),rgba(255,255,255,.02)); }
+.home-contact-banner .eyebrow { margin-bottom: 9px; color: #83cdb5; }
+.home-contact-banner h2 { margin: 0 0 8px; color: #f4f6f8; font-size: clamp(1.4rem,2.5vw,2.2rem); font-weight: 500; letter-spacing: -.05em; }
+.home-contact-banner p:not(.eyebrow) { margin: 0; color: #98a4af; font-size: .86rem; }
+.home-contact-banner .button { flex-shrink: 0; }
+@media (max-width: 700px) { .home-contact-banner { flex-direction: column; align-items: flex-start; padding: 25px; margin-top: 45px; } .home-contact-banner .button { width: 100%; } }

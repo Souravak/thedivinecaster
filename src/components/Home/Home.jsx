@@ -19,7 +19,7 @@ const Home = ({ setCurrentPage }) => (
         </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#channels">Explore my channels <i className="fa-solid fa-arrow-down" aria-hidden="true" /></a>
-          <button className="button button-secondary" type="button" onClick={() => setCurrentPage('about')}>About me <i className="fa-solid fa-arrow-right" aria-hidden="true" /></button>
+          <button className="button button-secondary" type="button" onClick={() => { setCurrentPage('contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Let's collaborate <i className="fa-solid fa-arrow-right" aria-hidden="true" /></button>
         </div>
         <div className="hero-note"><span className="note-rule" />Ideas, interests, and things worth sharing.</div>
       </div>
@@ -48,6 +48,7 @@ const Home = ({ setCurrentPage }) => (
         ))}
       </div>
       <div className="channels-footer"><span>New videos, fresh ideas, and a lot of curiosity.</span><a href="https://www.youtube.com/thedivinecaster" target="_blank" rel="noopener noreferrer">Visit YouTube <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" /></a></div>
+      <div className="home-contact-banner"><div><p className="eyebrow">HAVE AN IDEA?</p><h2>Let's create something together.</h2><p>Partnerships, collaborations, and conversations are always welcome.</p></div><button type="button" className="button button-primary" onClick={() => { setCurrentPage('contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Get in touch <i className="fa-solid fa-arrow-right" aria-hidden="true" /></button></div>
     </section>
     <p className="version">Site version {sessionStorage.getItem('currentVersion') || '—'}</p>
     <Footer />

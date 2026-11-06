@@ -5,6 +5,9 @@ import logo from '../../assets/logo.png';
 const primaryLinks = [
   { label: 'Home', page: 'home' },
   { label: 'About', page: 'about' },
+  { label: 'Trending', page: 'trending' },
+  { label: 'Store', page: 'tdcstores' },
+  { label: 'Contact', page: 'contact' },
 ];
 
 const Navbar = ({ setCurrentPage, currentPage }) => {
@@ -12,6 +15,7 @@ const Navbar = ({ setCurrentPage, currentPage }) => {
   const goToPage = (page) => {
     setCurrentPage(page);
     setShowMenu(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const pageButton = (item, mobile = false) => (
