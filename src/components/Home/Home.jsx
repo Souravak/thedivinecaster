@@ -8,6 +8,11 @@ const channels = [
   { name: 'DIVINES GAMING', category: 'Gaming & play', url: 'https://www.youtube.com/@divinesgaming', icon: 'fa-solid fa-gamepad' },
 ];
 
+const projects = [
+  { name: 'Phoenix Movie Box', description: 'Explore my movie platform.', url: 'https://movies.phoenixserver.space', icon: 'fa-solid fa-film', tag: 'MOVIES' },
+  { name: 'YouTube Video Downloader', description: 'A video download utility.', url: 'https://yt.phoenixserver.space', icon: 'fa-solid fa-download', tag: 'TOOLS' },
+];
+
 const Home = ({ setCurrentPage }) => (
   <main className="home">
     <section className="home-hero" aria-labelledby="home-heading">
@@ -48,6 +53,22 @@ const Home = ({ setCurrentPage }) => (
         ))}
       </div>
       <div className="channels-footer"><span>New videos, fresh ideas, and a lot of curiosity.</span><a href="https://www.youtube.com/thedivinecaster" target="_blank" rel="noopener noreferrer">Visit YouTube <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" /></a></div>
+      <section className="creator-projects" id="projects" aria-labelledby="projects-heading">
+        <div className="section-heading">
+          <div><p className="eyebrow">Built beyond the channel</p><h2 id="projects-heading">Explore my projects.</h2></div>
+          <p className="section-intro">A couple of things I've been building on the web.</p>
+        </div>
+        <div className="project-grid">
+          {projects.map(project => (
+            <a key={project.url} className="project-card" href={project.url} target="_blank" rel="noopener noreferrer">
+              <span className="project-topline"><span className="project-icon"><i className={project.icon} aria-hidden="true" /></span><span className="project-tag">{project.tag}</span></span>
+              <strong>{project.name}</strong>
+              <span className="project-description">{project.description}</span>
+              <span className="project-link">Visit project <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" /></span>
+            </a>
+          ))}
+        </div>
+      </section>
       <div className="home-contact-banner"><div><p className="eyebrow">HAVE AN IDEA?</p><h2>Let's create something together.</h2><p>Partnerships, collaborations, and conversations are always welcome.</p></div><button type="button" className="button button-primary" onClick={() => { setCurrentPage('contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Get in touch <i className="fa-solid fa-arrow-right" aria-hidden="true" /></button></div>
     </section>
     <p className="version">Site version {sessionStorage.getItem('currentVersion') || '—'}</p>
