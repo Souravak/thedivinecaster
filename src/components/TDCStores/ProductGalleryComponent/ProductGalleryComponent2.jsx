@@ -6,12 +6,13 @@ const ProductGalleryComponent2 = () => {
   const { products, notice } = useFirestoreProducts();
   const [search, setSearch] = useState('');
   const [sort, setSort] = useState('name');
+  const [failedImages, setFailedImages] = useState({});
 
   const visibleProducts = useMemo(() => {
     const query = search.trim().toLowerCase();
     const price = value => Number(String(value || '').replace(/[^0-9.]/g, '')) || 0;
     const filtered = products.filter(product =>
-      Boolean(product.img && product.myLink) &&
+      Boolean(product.img && product.myLink && !failedImages[product.id]) &&
       String(product.name || '').toLowerCase().includes(query)
     );
     return [...filtered].sort((a, b) => {
@@ -19,7 +20,7 @@ const ProductGalleryComponent2 = () => {
       if (sort === 'price-desc') return price(b.newPrice) - price(a.newPrice);
       return String(a.name || '').localeCompare(String(b.name || ''));
     });
-  }, [products, search, sort]);
+  }, [products, search, sort, failedImages]);
 
   return (
     <section className="store-gallery" aria-label="Products">
@@ -40,7 +41,7 @@ const ProductGalleryComponent2 = () => {
       <div className="image-container">
         {visibleProducts.map(product => (
           <article key={product.id} className="image-card">
-            <img src={product.img} alt={product.name || 'Product'} className="galleryItem" loading="lazy" />
+            <img src={product.img} alt={product.name || 'Product'} className="galleryItem" loading="lazy" onError={() => setFailedImages(previous => ({ ...previous, [product.id]: true }))} />
             <div className="details">
               <span className="productName">{product.name}</span>
               <div className="priceDetails">
