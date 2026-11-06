@@ -21,9 +21,13 @@ const Contact = () => {
       setStatus('success');
       setFeedback('Your message was sent successfully. Thank you for reaching out!');
     } catch (error) {
-      console.error('Contact form submission failed:', error);
+      const details = typeof error === 'string' ? error : (error && error.text) || 'No details returned';
+      const code = error && error.status;
+      console.error('EmailJS contact submission failed:', { status: code, message: details });
       setStatus('error');
-      setFeedback('Your message could not be sent. Please try again in a moment.');
+      setFeedback(code === 412
+        ? 'Email service authorization failed (412). The site owner needs to reconnect the email account in EmailJS.'
+        : 'Your message could not be sent. Please try again later.');
     }
   };
 
