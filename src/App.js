@@ -20,6 +20,9 @@ import './App.css';
 
 firebase.initializeApp(firebaseConfig);
 
+
+
+
 const fetchControllerDataFromFirestore = async () => {
   const db = firebase.firestore();
   const controllerRef = db.collection('controller').doc('status');
@@ -27,8 +30,27 @@ const fetchControllerDataFromFirestore = async () => {
   if (doc.exists) {
     return doc.data();
   } else {
-    console.log("No such document!");
+    // console.log("No such document!");
     return null;
+  }
+};
+
+const fetchCurrentVersionFromFirestore = async () => {
+  try {
+      const db = firebase.firestore();
+      const versionRef = db.collection('version-current').doc('current-version'); // Adjust the path as necessary
+      const doc = await versionRef.get();
+
+      if (doc.exists) {
+          const versionData = doc.data();
+          // console.log(versionData.version); // Log the version for debugging
+          sessionStorage.setItem('currentVersion', versionData.version); // Store in session storage
+          
+      } else {
+          console.log("No version document found!");
+      }
+  } catch (error) {
+      console.error("Error fetching version:", error);
   }
 };
 
@@ -103,7 +125,7 @@ const fetchVideoLinkFromFirestore = async () => {
     ]);
 
     const countData = countDoc.data();
-    console.log(countData.count);
+    // console.log(countData.count);
     sessionStorage.setItem('videoCount', countData.count);
 
     const tdclinks = [];
@@ -230,6 +252,15 @@ function App() {
         setLoading(false); // Set loading to false regardless of success or failure
     });
   
+    fetchCurrentVersionFromFirestore() // Add this line to fetch the version
+        .then(() => {
+            // Optionally handle any logic after fetching version
+        })
+        .catch(error => {
+            console.error("Error fetching version:", error);
+        });
+
+
     fetchSocialMediaDataFromFirestore()
       .then(data => {
         sessionStorage.setItem('socialMediaData', JSON.stringify(data));
@@ -256,7 +287,7 @@ function App() {
     fetchTrendingControllerDataFromFirestore()
       .then(data => {
         sessionStorage.setItem('trendingControllerData', JSON.stringify(data));
-        console.log(data);
+        // console.log(data);
       })
       .catch(error => {
         console.error("Error fetching trending controller data:", error);
@@ -328,7 +359,7 @@ function App() {
   const getPageComponent = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />;
+        return <Home setCurrentPage={setCurrentPage} />;
       case 'about':
         return <About />;
       case 'trending':
@@ -358,7 +389,7 @@ function App() {
         <MaintainancePage />
       ) : (
         <>
-          <Navbar setCurrentPage={setCurrentPage} />
+          <Navbar setCurrentPage={setCurrentPage} currentPage={currentPage} />
           {renderPage()}
         </>
       )}

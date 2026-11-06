@@ -1,40 +1,27 @@
-/* YourComponent.css */
-.App {
-    /* Hide scrollbar for both vertical and horizontal */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    overflow: -moz-scrollbars-none; /* Firefox */
-    overflow: auto; /* Hide scrollbar for WebKit based browsers */
-}
-  
-  .App::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, etc. */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #0b0e13;
+  color: #f4f6f8;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.loading-animation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
+button, input, textarea { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+::selection { color: #10231f; background: #83cdb5; }
 
-.spinner {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 3px solid rgba(0, 0, 0, 0.1);
-  border-top-color: #007bff;
-  animation: spin 1s linear infinite;
-}
+.loading-animation { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #0b0e13; color: #98a1ae; font-size: .8rem; }
+.loading-animation p { margin: 0; }
+.spinner { width: 34px; height: 34px; border: 2px solid rgba(255,255,255,.13); border-top-color: #83cdb5; border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .spinner { animation-duration: 1.5s; }
 }
-

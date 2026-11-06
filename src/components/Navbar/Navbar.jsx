@@ -1,94 +1,64 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
-import contactImg from '../../assets/contact.png';
-import menu from '../../assets/menu.png';
 
-const Navbar = ({ setCurrentPage }) => {
-  const [activeNav, setActiveNav] = useState('home');
+const primaryLinks = [
+  { label: 'Home', page: 'home' },
+  { label: 'About', page: 'about' },
+];
+
+const Navbar = ({ setCurrentPage, currentPage }) => {
   const [showMenu, setShowMenu] = useState(false);
-
-  const handleNavClick = (page) => {
+  const goToPage = (page) => {
     setCurrentPage(page);
-    setActiveNav(page);
+    setShowMenu(false);
   };
 
+  const pageButton = (item, mobile = false) => (
+    <button
+      key={item.page}
+      type="button"
+      className={`site-nav-link${currentPage === item.page ? ' is-active' : ''}${mobile ? ' mobile-link' : ''}`}
+      aria-current={currentPage === item.page ? 'page' : undefined}
+      onClick={() => goToPage(item.page)}
+    >
+      {item.label}
+    </button>
+  );
+
   return (
-    <nav className="navbar">
-        <a href="./"><img src={logo} alt="logo" className='logo'/></a>
-        <div className="desktopMenu">
-          <button onClick={() => handleNavClick('home')} className={`desktopMenuListItem item ${activeNav === 'home' ? 'active' : ''}`}>Home</button>
-          <button onClick={() => handleNavClick('about')} className={`desktopMenuListItem item ${activeNav === 'about' ? 'active' : ''}`}>About</button>
-          <button onClick={() => handleNavClick('trending')} className={`desktopMenuListItem item ${activeNav === 'trending' ? 'active' : ''}`}>Trending</button>
-          <button onClick={() => handleNavClick('tdcstores')} className={`desktopMenuListItem item ${activeNav === 'tdcstores' ? 'active' : ''}`}>TDC Stores</button>
-          <button onClick={() => handleNavClick('donate')} className={`desktopMenuListItem item ${activeNav === 'donate' ? 'active' : ''}`}>Donate</button>
-          <button onClick={() => handleNavClick('login')} className={`desktopMenuListItem item ${activeNav === 'login' ? 'active' : ''}`}>Data</button>
-          <button onClick={() => handleNavClick('admin-panel-login')} className={`desktopMenuListItem item ${activeNav === 'admin-panel-login' ? 'active' : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
-        </div>
-        <button onClick={() => handleNavClick('contact')} className={`${activeNav === 'contact' ? '' : '' } contact-me-button desktopMenu`} >
-          <span><img src={contactImg} alt="" className="desktopMenuImg" />&nbsp;Contact Me</span>
+    <header className="site-header">
+      <nav className="site-navbar" aria-label="Main navigation">
+        <button className="site-brand" type="button" onClick={() => goToPage('home')} aria-label="TheDIVINEcasteR, home">
+          <img src={logo} alt="" className="site-logo" />
+          <span className="brand-divider" />
+          <span className="brand-label">CREATOR & DIGITAL EXPLORER</span>
         </button>
-        <img src={menu} alt="Menu" className='mobMenu' onClick={() => setShowMenu(!showMenu)} />
-        <div className="navMenu" style={{display: showMenu? 'flex':'none'}}>
-          <button onClick={() => handleNavClick('home')} className={`listItem ${activeNav === 'home' ? 'active' : ''}`}>Home</button>
-          <button onClick={() => handleNavClick('about')} className={`listItem ${activeNav === 'about' ? 'active' : ''}`}>About</button>
-          <button onClick={() => handleNavClick('trending')} className={`listItem ${activeNav === 'trending' ? 'active' : ''}`}>Trending</button>
-          <button onClick={() => handleNavClick('tdcstores')} className={`listItem ${activeNav === 'tdcstores' ? 'active' : ''}`}>TDC Stores</button>
-          <button onClick={() => handleNavClick('donate')} className={`listItem ${activeNav === 'donate' ? 'active' : ''}`}>Donate</button>
-          <button onClick={() => handleNavClick('login')} className={`listItem ${activeNav === 'login' ? 'active' : ''}`}>Data</button>
-          <button onClick={() => handleNavClick('admin-panel-login')} className={`listItem ${activeNav === 'admin-panel-login' ? 'active' : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
+
+        <div className="site-nav-links">{primaryLinks.map((item) => pageButton(item))}</div>
+
+        <a className="site-contact-button" href="https://www.youtube.com/thedivinecaster" target="_blank" rel="noopener noreferrer">
+          Watch on YouTube <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" />
+        </a>
+
+        <button
+          className={`site-menu-toggle${showMenu ? ' is-open' : ''}`}
+          type="button"
+          aria-label={showMenu ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={showMenu}
+          aria-controls="site-mobile-menu"
+          onClick={() => setShowMenu((open) => !open)}
+        >
+          <span /><span />
+        </button>
+
+        <div className={`site-mobile-menu${showMenu ? ' is-visible' : ''}`} id="site-mobile-menu" aria-hidden={!showMenu}>
+          {primaryLinks.map((item) => pageButton(item, true))}
+          <a className="mobile-youtube-link" href="https://www.youtube.com/thedivinecaster" target="_blank" rel="noopener noreferrer">Watch on YouTube <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" /></a>
         </div>
-    </nav>
-  )
-}
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
-
-// import React, { useState } from 'react';
-// import styles from './Navbar.module.css'; // Import styles from Navbar.module.css
-// import logo from '../../assets/logo.png';
-// import contactImg from '../../assets/contact.png';
-// import menu from '../../assets/menu.png';
-
-// const Navbar = ({ setCurrentPage }) => {
-//   const [activeNav, setActiveNav] = useState('home');
-//   const [showMenu, setShowMenu] = useState(false);
-
-//   const handleNavClick = (page) => {
-//     setCurrentPage(page);
-//     setActiveNav(page);
-//   };
-
-//   return (
-//     <nav className={styles.navbar}>
-//       <a href="./"><img src={logo} alt="logo" className={styles.logo}/></a>
-//       <div className={styles.desktopMenu}>
-//         <button onClick={() => handleNavClick('home')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'home' ? styles.active : ''}`}>Home</button>
-//         <button onClick={() => handleNavClick('about')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'about' ? styles.active : ''}`}>About</button>
-//         <button onClick={() => handleNavClick('trending')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'trending' ? styles.active : ''}`}>Trending</button>
-//         <button onClick={() => handleNavClick('tdcstores')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'tdcstores' ? styles.active : ''}`}>TDC Stores</button>
-//         <button onClick={() => handleNavClick('donate')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'donate' ? styles.active : ''}`}>Donate</button>
-//         <button onClick={() => handleNavClick('login')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'login' ? styles.active : ''}`}>Data</button>
-//         <button onClick={() => handleNavClick('admin-panel-login')} className={`${styles.desktopMenuListItem} ${styles.item} ${activeNav === 'admin-panel-login' ? styles.active : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
-//       </div>
-//       <button onClick={() => handleNavClick('contact')} className={`${styles.contactMeButton} ${styles.contactMeButtonDesk}`} >
-//         <span><img src={contactImg} alt="" className={styles.desktopMenuImg} />&nbsp;Contact Me</span>
-//       </button>
-//       <img src={menu} alt="Menu" className={styles.mobMenu} onClick={() => setShowMenu(!showMenu)} />
-//       <div className={styles.navMenu} style={{display: showMenu? 'flex':'none'}}>
-//         <button onClick={() => handleNavClick('home')} className={`${styles.listItem} ${activeNav === 'home' ? styles.active : ''}`}>Home</button>
-//         <button onClick={() => handleNavClick('about')} className={`${styles.listItem} ${activeNav === 'about' ? styles.active : ''}`}>About</button>
-//         <button onClick={() => handleNavClick('trending')} className={`${styles.listItem} ${activeNav === 'trending' ? styles.active : ''}`}>Trending</button>
-//         <button onClick={() => handleNavClick('tdcstores')} className={`${styles.listItem} ${activeNav === 'tdcstores' ? styles.active : ''}`}>TDC Stores</button>
-//         <button onClick={() => handleNavClick('donate')} className={`${styles.listItem} ${activeNav === 'donate' ? styles.active : ''}`}>Donate</button>
-//         <button onClick={() => handleNavClick('login')} className={`${styles.listItem} ${activeNav === 'login' ? styles.active : ''}`}>Data</button>
-//         <button onClick={() => handleNavClick('admin-panel-login')} className={`${styles.listItem} ${activeNav === 'admin-panel-login' ? styles.active : ''}`}><i className='fas fa-user-shield' style={{color:'red'}}></i></button>
-//         <button onClick={() => handleNavClick('contact')} className={`${styles.contactMeButton} ${styles.listItem} ${styles.contactMeButtonMob}`} >
-//           <span><img src={contactImg} alt="" className={styles.desktopMenuImg} />&nbsp;Contact Me</span>
-//         </button>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
+export default Navbar;

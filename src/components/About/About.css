@@ -1,40 +1,22 @@
-.about{
-}
+.about { min-height: calc(100vh - 76px); display: flex; flex-direction: column; background: #0b0e13; color: #f4f6f8; }
+.about-body { width: min(1200px, calc(100% - 48px)); margin: 0 auto; padding: clamp(40px, 7vw, 88px) 0 72px; flex: 1; }
+.about .title { margin: 0 0 32px; color: #f4f6f8; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 500; letter-spacing: -.06em; line-height: 1.1; }
+.about-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); align-items: stretch; gap: 18px; }
+.social-item-container { min-width: 0; display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 10px; margin: 0; padding: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.09); border-radius: 8px; background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018)); }
+.about .social-item { width: min(22rem, 100%); height: auto; min-height: 25rem; margin: 0 auto; overflow: hidden; }
+.about .social-item-box { min-width: 0; }
+.about .channel-data { width: min(12rem, calc(100% - 7rem)); min-width: 0; overflow-wrap: anywhere; }
+.about .channel-name { font-size: clamp(.72rem, 3.9vw, .95rem); }
+.about .profile-picture { width: clamp(4rem, 22vw, 6rem); flex: 0 0 auto; }
+.about .channel-details-item { overflow-wrap: anywhere; }
+.social-title { margin: 0; color: #a9b1ba; text-align: left; font-size: .8rem; font-weight: 500; letter-spacing: .04em; }
+.about-loading { margin: 0; color: #a3acb8; font-size: .92rem; line-height: 1.7; }
+.join-social-media-button { margin-top: 10px; text-align: center; }
+.join-social-media-item-button { display: inline-block; padding: 8px 30px; border-radius: 20px; color: white; font-size: .8rem; font-weight: 600; text-decoration: none; cursor: pointer; }
 
-.about-container{
-}
-.about-body{
-    margin: 0 5rem;
-}
-
-.title{
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-}
-
-.about-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
-}
-
-.social-item-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    background: rgba(63, 63, 63, 0.632);
-    border-radius: 1rem;
-    gap: 5px;
-    margin-bottom: 5rem;
-}
-
-.social-title{
-    text-align: center;
+@media (max-width: 560px) {
+  .about-body { width: calc(100% - 32px); padding-top: 42px; padding-bottom: 42px; }
+  .about .title { margin-bottom: 24px; }
+  .about-container { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .social-item-container { padding: 12px; }
 }

@@ -18,10 +18,10 @@ const About = () => {
   const socialMediaData = JSON.parse(sessionStorage.getItem('socialMediaData'));
   return (
     <>
-    {socialMediaData && (
       <div className="about">
         <div className="about-body">
-          <div className="title">About</div>
+          <h1 className="title">About</h1>
+          {socialMediaData ? (
           <div className="about-container">
 
             {/* Instagram */}
@@ -84,11 +84,15 @@ const About = () => {
               <Discord data={socialMediaData.discord}/>
             </div>
 
+            
+
           </div>
+          ) : (
+            <p className="about-loading">Social profiles are temporarily unavailable. Please try again shortly.</p>
+          )}
         </div>
         <Footer/>
-    </div>  
-    )}
+      </div>
     </>
   )
 }
