@@ -121,9 +121,8 @@ const fetchVideoLinkFromFirestore = async () => {
       videoCountRef.get()
     ]);
 
-    const countData = countDoc.data();
-    // console.log(countData.count);
-    sessionStorage.setItem('videoCount', countData.count);
+    const countData = countDoc.exists ? countDoc.data() : {};
+    sessionStorage.setItem('videoCount', Number(countData.count) || 0);
 
     const tdclinks = [];
     const dglinks = [];

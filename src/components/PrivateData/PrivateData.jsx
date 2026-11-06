@@ -7,9 +7,8 @@ import './PrivateData.css';
 
 
 const PrivateData = () => {
-  const controllerData = JSON.parse(sessionStorage.getItem('controllerData'))
-    var time = +controllerData.duration; // in minutes
-    time = time*60; // convert to milliseconds
+  const controllerData = JSON.parse(sessionStorage.getItem('controllerData') || 'null') || {};
+  const time = Math.max(0, Number(controllerData.duration) || 0) * 60; // seconds
 
   return (
     <section id="private-data">

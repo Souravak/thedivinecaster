@@ -4,8 +4,8 @@ import './AdminPanel.css';
 import firebase from '../../firebase';
 
 const AdminPanel = () => {
-  const [controller, setController] = useState(JSON.parse(sessionStorage.getItem('controllerData')));
-  const [socialMediaData, setSocialMediaData] = useState(JSON.parse(sessionStorage.getItem('socialMediaData')));
+  const [controller, setController] = useState(JSON.parse(sessionStorage.getItem('controllerData') || 'null') || { run: 'online', duration: 5 });
+  const [socialMediaData, setSocialMediaData] = useState(JSON.parse(sessionStorage.getItem('socialMediaData') || 'null') || {});
   const [videoLink, setVideoLink] = useState('');
   const [videoCategory, setVideoCategory] = useState('default');
   
@@ -18,7 +18,7 @@ const AdminPanel = () => {
   const [image, setImage] = useState(null);
   const [imageUrl, setImageUrl] = useState('');
   
-  const trendingControllerData = JSON.parse(sessionStorage.getItem('trendingControllerData') || '{}') || {};
+  const trendingControllerData = JSON.parse(sessionStorage.getItem('trendingControllerData') || 'null') || {};
 
   const [tdcCheckBox, setTdcCheckBox] = useState(Boolean(trendingControllerData.tdc));
   const [dgCheckBox, setDgCheckBox] = useState(Boolean(trendingControllerData.dg));
@@ -107,22 +107,26 @@ const AdminPanel = () => {
   // Handle Update firestore 
   const updateFirestoreData = async (collection, doc, data) => {
     const db = firebase.firestore();
-    const dataRef = db.collection(collection).doc(doc);
-    try {
-      await dataRef.update(data);
-    } catch (error) {
-      // console.error('Error updating data:', error);
-      alert(`Error updating ${doc} data: ${error}`);
-    }
+    await db.collection(collection).doc(doc).update(data);
   };
 
   
   // Handle data update
   const handleDataUpdate = async (platform, data, showAlert = true) => {
-    // console.log(`Calling updateFirestoreData for ${platform}`);
-    updateFirestoreData('data', platform.toLowerCase(), data);
-    setSocialMediaData({ ...socialMediaData, [platform]: data });
-    showAlert && alert(`${platform} data updated successfully!`);
+    try {
+      if (platform === 'Controller') {
+        await updateFirestoreData('controller', 'status', data);
+        sessionStorage.setItem('controllerData', JSON.stringify(data));
+      } else {
+        await updateFirestoreData('data', platform.toLowerCase(), data);
+        setSocialMediaData(previous => ({ ...previous, [platform]: data }));
+        sessionStorage.setItem('socialMediaData', JSON.stringify({ ...socialMediaData, [platform]: data }));
+      }
+      showAlert && alert(`${platform} data updated successfully!`);
+    } catch (error) {
+      console.error(`Error updating ${platform} data:`, error);
+      alert(`Error updating ${platform} data. Please try again.`);
+    }
   };
 
   // Handle data reset
@@ -244,12 +248,12 @@ const AdminPanel = () => {
   }
 
   const handleClearTrendingController = () => {
-    setTdcCheckBox(trendingControllerData.tdc);
-    setDgCheckBox(trendingControllerData.dg);
-    setSrvtvCheckBox(trendingControllerData.srvtv);
-    setDmhCheckBox(trendingControllerData.dmh);
-    setDpcsCheckBox(trendingControllerData.dpcs);
-    setDchCheckBox(trendingControllerData.dch);
+    setTdcCheckBox(Boolean(trendingControllerData.tdc));
+    setDgCheckBox(Boolean(trendingControllerData.dg));
+    setSrvtvCheckBox(Boolean(trendingControllerData.srvtv));
+    setDmhCheckBox(Boolean(trendingControllerData.dmh));
+    setDpcsCheckBox(Boolean(trendingControllerData.dpcs));
+    setDchCheckBox(Boolean(trendingControllerData.dch));
     alert('Trending controller data cleared successfully!');
 
   }
