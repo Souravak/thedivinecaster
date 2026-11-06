@@ -5,7 +5,7 @@ import logo from '../../assets/logo.png';
 const primaryLinks = [
   { label: 'Home', page: 'home' },
   { label: 'About', page: 'about' },
-  { label: 'Trending', page: 'trending' },
+  // { label: 'Trending', page: 'trending' },
   { label: 'Store', page: 'tdcstores' },
   { label: 'Contact', page: 'contact' },
 ];
@@ -41,9 +41,9 @@ const Navbar = ({ setCurrentPage, currentPage }) => {
 
         <div className="site-nav-links">{primaryLinks.map((item) => pageButton(item))}</div>
 
-        <a className="site-contact-button" href="https://www.youtube.com/thedivinecaster" target="_blank" rel="noopener noreferrer">
+        {/* <a className="site-contact-button" href="https://www.youtube.com/thedivinecaster" target="_blank" rel="noopener noreferrer">
           Watch on YouTube <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" />
-        </a>
+        </a> */}
 
         <button
           className={`site-menu-toggle${showMenu ? ' is-open' : ''}`}

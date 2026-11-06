@@ -20,7 +20,7 @@ const About = () => {
     <>
       <div className="about">
         <div className="about-body">
-          <h1 className="title">About</h1>
+          {/* <h1 className="title">About</h1> */}
           {socialMediaData ? (
           <div className="about-container">
 

@@ -12,7 +12,7 @@
   width: min(1320px, calc(100% - 96px));
   min-height: min(720px, calc(100vh - 76px));
   margin: 0 auto;
-  padding: 90px 0 112px;
+  padding: 20px 0 112px;
   display: grid;
   grid-template-columns: 1.04fr .96fr;
   align-items: center;
